@@ -27,7 +27,6 @@ const FeedbacksCard = ({ index, testimonial, name, designation, company, image }
 
 
 
-
 const Feedbacks = () => {
 
   return (
