@@ -7,7 +7,10 @@ import { SectionWrapper } from '../hoc'
 import { EarthCanvas } from './canvas'
 import { styles } from '../styles'
 
-
+//                      AUTH FOR EMAIL.JS
+// template_2dszdv8
+// service_ylfetrb
+// fNmzdLNNCGF-7zD8G
 
 const Contact = () => {
 
@@ -23,9 +26,45 @@ const Contact = () => {
 
 
 
-  const handleChange = (event) => { }
+  const handleChange = (event) => {
+    const { name, value } = event.target
 
-  const handleSubmit = (event) => { }
+    setForm({ ...form, [name]: value })
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault
+    setLoading(true)
+
+    emailjs.send(
+      'service_ylfetrb',
+      'template_2dszdv8',
+      {
+        from_name: form.name,
+        to_name: 'Tom',
+        from_email: form.email,
+        to_email: 'mahettom@gmail.com',
+        message: form.message
+      },
+      'fNmzdLNNCGF-7zD8G'
+    )
+      .then(() => {
+
+        setLoading(false)
+        setForm({
+          name: '',
+          email: '',
+          message: ''
+        })
+        alert('Thank you, I will get back to you as soon as possible!')
+
+      }, (error) => {
+
+        setLoading(false)
+        console.log(error)
+        alert('Something went wrong.')
+      })
+  }
 
 
   return (
