@@ -5,9 +5,11 @@ import Loader from '../Loader'
 import CanvasLoader from '../Loader'
 
 
+
 const Computers = ({ isMobile }) => {
 
-  const computer = useGLTF('./desktop_pc/scene.gltf')
+  // const computer = useGLTF('./desktop_pc/scene.gltf')
+  const computer = useGLTF('./hero_model/scene.gltf')
 
   return (
 
@@ -19,15 +21,15 @@ const Computers = ({ isMobile }) => {
         position={[-20, 50, 10]}
         angle={0.12}
         penumbra={1}
-        intensity={1}
+        intensity={1.3}
         castShadow
         shadow-mapSize={1024}
       />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 0.7 : 0.75}
+        scale={isMobile ? 15 : 30}
         position={isMobile ? [0, -3, -2.2] : [0, -3.5, -1, 5]}
-        rotaition={[-0.01, -0.2, -0.1]}
+      // rotation={[0, 0, 0]}
       />
     </mesh>
 
