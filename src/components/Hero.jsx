@@ -12,10 +12,10 @@ const Hero = () => {
 
         <ComputersCanvas />
 
-        <div className="m-3">
-          <h1 className=' w-60 text-[2rem] text-white font-ledger font-extrabold'>Hi, i'm <span className="text-[#ff5300] font-ledger">Tom</span></h1>
+        <div className="m-3 min-w-[200px]">
+          <h1 className={` ${styles.heroSubText} `}>Hi, i'm <span className="text-[#ff5300] font-ledger">Tom</span></h1>
           <br />
-          <p className={`${styles.heroSubText}  text-white-100 font-ledger`}>Mongo.DB <br></br> Express.JS <br></br> React.JS <br></br> Node.js</p>
+          <p className={`${styles.heroSubText} `}>MongoDB <br></br> Express.js <br></br> React.js <br></br> Node.js</p>
         </div>
 
       </div>
