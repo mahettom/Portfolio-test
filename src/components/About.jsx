@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import Tilt from 'react-parallax-tilt'
 import { styles } from '../styles'
 import { motion } from 'framer-motion'
@@ -37,6 +37,41 @@ const ServiceCard = ({ index, title, icon }) => {
 
 const About = () => {
 
+  // const [slider, setSlider] = useState(0)
+  // const [mouseInitialPosition, setMouseInitialPosition] = useState(0)
+
+  const galleryRef = useRef(null)
+
+
+  useEffect(() => {
+
+    const gallery = galleryRef.current
+    console.log(gallery.style);
+    gallery.classList.add('-translate-x-[70%]')
+
+  }, [])
+
+
+  // window.onmousedown = event => {
+  //   event.preventDefault()
+
+  //   setMouseInitialPosition(event.clientX)
+  //   // console.log(mouseInitialPosition);
+  // }
+
+  // window.onmousemove = event => {
+  //   if (mouseInitialPosition === 0) return;
+
+  //   const mouseActualPosition = parseFloat(mouseInitialPosition) - event.clientX
+  //   const maxDistance = window.innerWidth / 2
+
+  //   const percentage = (mouseActualPosition / maxDistance) * -100
+
+  //   console.log(galleryRef);
+  //   // gallery.style = `-translate-x-[${percentage}%]`
+  // }
+
+
 
   return (
 
@@ -55,12 +90,12 @@ const About = () => {
         Et je voudrais maintenant:
       </motion.p> */}
 
-      <div className='flex gap-[4vmin] absolute left-1/2 top-1/2 -translate-y-[50%]'>
-        <img className='w-[40vmin] h-[56vmin] object-cover object-center' src="https://images.unsplash.com/photo-1608346128025-1896b97a6fa7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Picture-1" />
-        <img className='w-[40vmin] h-[56vmin] object-cover object-center' src="https://images.unsplash.com/photo-1618336753974-aae8e04506aa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Picture-2" />
-        <img className='w-[40vmin] h-[56vmin] object-cover object-center' src="https://images.unsplash.com/photo-1682578566205-1dc0d51d978c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=686&q=80" alt="Picture-3" />
-        <img className='w-[40vmin] h-[56vmin] object-cover object-center' src="https://images.unsplash.com/photo-1680504960958-f87a8cdb767a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80" alt="Picture-4" />
-        <img className='w-[40vmin] h-[56vmin] object-cover object-center' src="https://images.unsplash.com/photo-1598040795256-03d22d952f4d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="Picture-5" />
+      <div ref={galleryRef} className='flex gap-[4vmin] absolute left-1/2 top-1/2 -translate-y-[50%]'>
+        <img className='w-[40vmin] h-[56vmin] object-cover object-center' src="https://images.unsplash.com/photo-1608346128025-1896b97a6fa7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Picture-1" draggable={false} />
+        <img className='w-[40vmin] h-[56vmin] object-cover object-center' src="https://images.unsplash.com/photo-1618336753974-aae8e04506aa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Picture-2" draggable={false} />
+        <img className='w-[40vmin] h-[56vmin] object-cover object-center' src="https://images.unsplash.com/photo-1682578566205-1dc0d51d978c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=686&q=80" alt="Picture-3" draggable={false} />
+        <img className='w-[40vmin] h-[56vmin] object-cover object-center' src="https://images.unsplash.com/photo-1680504960958-f87a8cdb767a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80" alt="Picture-4" draggable={false} />
+        <img className='w-[40vmin] h-[56vmin] object-cover object-center' src="https://images.unsplash.com/photo-1598040795256-03d22d952f4d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="Picture-5" draggable={false} />
       </div>
 
     </>
