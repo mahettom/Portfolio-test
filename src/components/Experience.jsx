@@ -10,10 +10,10 @@ import { styles } from "../styles"
 const ExperienceCard = ({ experience }) => (
 
   <VerticalTimelineElement
-    contentStyle={{ background: '#1d1836', color: '#fff' }}
+    contentStyle={{ background: 'white', color: 'black', font: 'font-ledger', border: '7px solid #232631' }}
     contentArrowStyle={{ borderRight: '7px solid #232631' }}
     date={experience.date}
-    iconStyle={{ background: experience.iconBg }}
+    iconStyle={{ background: 'black' }}
     icon={
       <div className="flex justify-center items-center w-full h-full">
         <img
