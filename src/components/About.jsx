@@ -80,7 +80,7 @@ const About = () => {
 
     <>
 
-      {/* <motion.div variants={textVariant()}>
+      <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview.</h2>
       </motion.div>
@@ -91,7 +91,7 @@ const About = () => {
 
       <motion.p variants={fadeIn('', '', 0.1, 1)} className='mt-2 text-secondary text-[17px] max-w-3xl leading-[30px]'>
         Et je voudrais maintenant:
-      </motion.p> */}
+      </motion.p>
 
       <div id='image-track' className={`flex gap-[4vmin] absolute left-1/2 top-1/2 -translate-y-[50%]`} data-mouse-down-at='0' data-prev-percentage='0'>
         <img className='w-[40vmin] h-[56vmin] object-cover object-center' src="https://images.unsplash.com/photo-1608346128025-1896b97a6fa7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Picture-1" draggable={false} />
@@ -101,15 +101,15 @@ const About = () => {
         <img className='w-[40vmin] h-[56vmin] object-cover object-center' src="https://images.unsplash.com/photo-1598040795256-03d22d952f4d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="Picture-5" draggable={false} />
       </div>
 
+
+
+
+      <div className='mt-40 flex flex-wrap gap-10'>
+        {services.map((service, index) => (
+          <ServiceCard key={service.title} index={index} {...service} />
+        ))}
+      </div>
     </>
-
-
-    //   <div className='mt-40 flex flex-wrap gap-10'>
-    //     {services.map((service, index) => (
-    //       <ServiceCard key={service.title} index={index} {...service} />
-    //     ))}
-    //   </div>
-    // </>
   )
 }
 
