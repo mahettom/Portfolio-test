@@ -8,21 +8,23 @@ import { styles } from "../styles"
 const ExperienceCard = ({ experience }) => (
 
   <div className="p-10">
-    <div className="p-3 border-solid hover:border-double border-4 border-primary">
+    <div className="p-3 hover:border-double border-4 border-primary">
       <h3 className='text-primary font-ledger text-[24px] font-bold'>{experience.title}</h3>
       <p className="text-primary font-ledger text-[16px] font-semibold" style={{ margin: 0 }}>{experience.company_name}</p>
     </div>
 
-    <ul className='mt-5 list-disc ml-5 space-y-2'>
-      {experience.points.map((point, index) => (
-        <li
-          key={`experience-points-${index}`}
-          className='text-secondary font-ledger text-[14px] pl-1 tracking-wider'
-        >
-          {point}
-        </li>
-      ))}
-    </ul>
+    <div className="bg-primary  ">
+      <ul className='p-5 list-disc ml-5 space-y-2'>
+        {experience.points.map((point, index) => (
+          <li
+            key={`experience-points-${index}`}
+            className='text-secondary font-ledger text-[14px] pl-1 tracking-wider'
+          >
+            {point}
+          </li>
+        ))}
+      </ul>
+    </div>
   </div>
 )
 
