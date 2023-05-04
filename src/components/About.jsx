@@ -85,11 +85,11 @@ const About = () => {
         <h2 className={styles.sectionHeadText}>Overview.</h2>
       </motion.div>
 
-      <motion.p variants={fadeIn('', '', 0.1, 1)} className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'>
+      <motion.p variants={fadeIn('', '', 0.1, 1)} className='mt-10 text-secondary font-ledger text-[16px] max-w-3xl leading-[30px]'>
         J'ai été formé pour devenir un developpeur fullstack à Ironhack.
       </motion.p>
 
-      <motion.p variants={fadeIn('', '', 0.1, 1)} className='mt-2 text-secondary text-[17px] max-w-3xl leading-[30px]'>
+      <motion.p variants={fadeIn('', '', 0.1, 1)} className='mt-2 text-secondary font-ledger text-[16px] max-w-3xl leading-[30px]'>
         Et je voudrais maintenant:
       </motion.p>
 
