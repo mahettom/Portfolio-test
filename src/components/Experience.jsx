@@ -7,10 +7,10 @@ import { styles } from "../styles"
 
 const ExperienceCard = ({ experience }) => (
 
-  <>
+  <div className="p-10">
     <div>
-      <h3 className='text-white text-[24px] font-bold'>{experience.title}</h3>
-      <p className="text-secondary text-[16px] font-semibold" style={{ margin: 0 }}>{experience.company_name}</p>
+      <h3 className='text-primary font-ledger text-[24px] font-bold'>{experience.title}</h3>
+      <p className="text-primary font-ledger text-[16px] font-semibold" style={{ margin: 0 }}>{experience.company_name}</p>
     </div>
 
     <ul className='mt-5 list-disc ml-5 space-y-2'>
@@ -23,7 +23,7 @@ const ExperienceCard = ({ experience }) => (
         </li>
       ))}
     </ul>
-  </>
+  </div>
 )
 
 
@@ -32,15 +32,18 @@ const Experience = () => {
 
   return (
     <>
+
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>What i have done so far</p>
-        <h2 className={styles.sectionHeadText}>Work Experience</h2>
+        <p className={`${styles.sectionSubText} text-primary `}>What i have done so far</p>
+        <h2 className={`${styles.sectionHeadText} text-primary`}>Work Experience</h2>
       </motion.div>
+
       <div className='mt-20 flex flex-col'>
         {experiences.map((experience, index) =>
           <ExperienceCard key={index} experience={experience} />
         )}
       </div>
+
     </>
   )
 }
