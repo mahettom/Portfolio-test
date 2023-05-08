@@ -25,6 +25,12 @@ import {
     threejs,
 } from "../assets";
 
+import {
+    codesos,
+    pursuit,
+    sightings
+} from '../assets/project'
+
 export const navLinks = [
     {
         id: "about",
@@ -173,7 +179,7 @@ const projects = [
                 color: "pink-text-gradient",
             },
         ],
-        image: carrent,
+        image: pursuit,
         source_code_link: "https://github.com/",
     },
     {
@@ -194,7 +200,7 @@ const projects = [
                 color: "pink-text-gradient",
             },
         ],
-        image: jobit,
+        image: sightings,
         source_code_link: "https://github.com/",
     },
     {
@@ -215,7 +221,7 @@ const projects = [
                 color: "pink-text-gradient",
             },
         ],
-        image: tripguide,
+        image: codesos,
         source_code_link: "https://github.com/",
     },
 ];
