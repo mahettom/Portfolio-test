@@ -1,6 +1,6 @@
 import { fadeIn, textVariant } from '../utils/motion'
 import { SectionWrapper } from '../hoc'
-import { projects } from '../constants'
+import { projects } from '../constants/index'
 import { motion } from 'framer-motion'
 import Tilt from 'react-parallax-tilt'
 import { styles } from '../styles'
@@ -64,8 +64,8 @@ const Works = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>My work</p>
-        <h2 className={styles.sectionHeadText}>Project.</h2>
+        <p className={`${styles.sectionSubText} text-primary`}>My work</p>
+        <h2 className={`${styles.sectionHeadText} text-primary`}>Project.</h2>
       </motion.div>
 
 
