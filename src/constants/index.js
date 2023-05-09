@@ -1,3 +1,7 @@
+import code from '../assets/code.png'
+import pursuit from '../assets/pursuit.png'
+import sightings from '../assets/sightings.png'
+
 import {
     mobile,
     backend,
@@ -15,21 +19,12 @@ import {
     git,
     figma,
     docker,
-    meta,
     starbucks,
     tesla,
     shopify,
-    carrent,
-    jobit,
-    tripguide,
     threejs,
 } from "../assets";
 
-import {
-    codesos,
-    pursuit,
-    sightings
-} from '../assets/project'
 
 export const navLinks = [
     {
@@ -221,7 +216,7 @@ const projects = [
                 color: "pink-text-gradient",
             },
         ],
-        image: codesos,
+        image: code,
         source_code_link: "https://github.com/",
     },
 ];
