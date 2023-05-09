@@ -17,7 +17,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
 
       {/* className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full' */}
 
-      <div className='relative w-full h-[230px]'>
+      <div className='relative w-full'>
 
         <img src={image} alt={name} className='w-full h-full object-cover rounded-2xl' />
 
@@ -65,17 +65,22 @@ const Works = () => {
       </motion.div>
 
 
-      <div className='w-full flex'>
+      <div className='w-[95%] bg-gray-100 flex mt-10'>
 
-        <motion.p
-          variants={fadeIn('', '', 0.1, 1)}
-          className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'>
+        <motion.p variants={fadeIn('', '', 0.1, 1)} className='mt-3 text-primary text-[17px] max-w-3xl leading-[30px] p-5 rounded-md'>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo ex repellat blanditiis laudantium, eligendi est ipsa ipsam, obcaecati veritatis voluptatum facilis modi eaque excepturi. Dolores sunt ipsam laborum iusto porro.
         </motion.p>
 
+        <motion.div className='flex flex-col'>
+          {projects.map((project, index) => (
+
+            <button variants={fadeIn('', '', 0.1, 1)} className='bg-black'>click me</button>
+          ))}
+        </motion.div>
+
       </div>
 
-      <div className='mt-20 flex flex-wrap gap-7 '>
+      <div className='xs:mt-15 md:mt-20 mt-20 flex flex-wrap gap-7'>
 
         {projects.map((project, index) => (
 
