@@ -1,3 +1,7 @@
+import code from '../assets/code.png'
+import pursuit from '../assets/pursuit.png'
+import sightings from '../assets/sightings.png'
+
 import {
     mobile,
     backend,
@@ -15,15 +19,12 @@ import {
     git,
     figma,
     docker,
-    meta,
     starbucks,
     tesla,
     shopify,
-    carrent,
-    jobit,
-    tripguide,
     threejs,
 } from "../assets";
+
 
 export const navLinks = [
     {
@@ -156,12 +157,12 @@ const experiences = [
 
 const projects = [
     {
-        name: "Car Rent",
+        name: "Pixel pursuit",
         description:
             "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
         tags: [
             {
-                name: "react",
+                name: "javascript",
                 color: "blue-text-gradient",
             },
             {
@@ -173,7 +174,7 @@ const projects = [
                 color: "pink-text-gradient",
             },
         ],
-        image: carrent,
+        image: pursuit,
         source_code_link: "https://github.com/",
     },
     {
@@ -194,7 +195,7 @@ const projects = [
                 color: "pink-text-gradient",
             },
         ],
-        image: jobit,
+        image: sightings,
         source_code_link: "https://github.com/",
     },
     {
@@ -215,7 +216,7 @@ const projects = [
                 color: "pink-text-gradient",
             },
         ],
-        image: tripguide,
+        image: code,
         source_code_link: "https://github.com/",
     },
 ];
