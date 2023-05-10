@@ -74,7 +74,7 @@ const Works = () => {
         <motion.div className='flex flex-col'>
           {projects.map((project, index) => (
 
-            <button variants={fadeIn('', '', 0.1, 1)} className='bg-black'>click me</button>
+            <button variants={fadeIn('', '', 0.1, 1)} src={project.source_code_link} className='bg-black'>click me</button>
           ))}
         </motion.div>
 
