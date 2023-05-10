@@ -158,6 +158,7 @@ const experiences = [
 const projects = [
     {
         name: "Pixel pursuit",
+        id: "Pixel",
         description:
             "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
         tags: [
@@ -179,6 +180,7 @@ const projects = [
     },
     {
         name: "Job IT",
+        id: "Sightings",
         description:
             "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
         tags: [
@@ -200,6 +202,7 @@ const projects = [
     },
     {
         name: "Trip Guide",
+        id: "Codesos",
         description:
             "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
         tags: [
