@@ -57,9 +57,8 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
 
 const Works = () => {
 
-  const [pixel, setPixel] = useState(true)
-  const [sightings, setSightings] = useState(false)
-  const [codesos, setCodesos] = useState(false)
+  const [actualProject, setActualProject] = useState(projects[0])
+
 
 
   return (
@@ -79,21 +78,21 @@ const Works = () => {
         <motion.div className='flex flex-col'>
           {projects.map((project, index) => (
 
-            <button variants={fadeIn('', '', 0.1, 1)} onClick={() => <ProjectCard key={`project-${index}`} index={index} {...project} />} className='bg-black font-ledger p-4'>{project.name}</button>
+            <button variants={fadeIn('', '', 0.1, 1)} onClick={() => setActualProject(project)} className='bg-black font-ledger p-4' key={`project-${index}`}>{project.name}</button>
           ))}
         </motion.div>
 
       </div>
 
-      {/* <div className='xs:mt-15 md:mt-20 mt-20 flex flex-wrap gap-7'>
+      <div className='xs:mt-15 md:mt-20 mt-20 flex flex-wrap gap-7'>
 
-        {projects.map((project, index) => (
+        {/* {projects.map((project, index) => ( */}
 
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
+        <ProjectCard {...actualProject} />
 
-        ))}
+        {/* ))} */}
 
-      </div> */}
+      </div>
     </>
   )
 }
