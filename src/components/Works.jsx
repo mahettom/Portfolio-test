@@ -68,18 +68,18 @@ const Works = () => {
       </motion.div>
 
 
-      <div className='w-[95%] bg-gray-100 flex mt-10'>
+      <div className=' bg-black p-2 rounded-l rounded-r xs:mt-20 sm:mt-24 mt-40 w-[95%]'>
+        {projects.map((project, index) => (
 
-        <motion.p variants={fadeIn('', '', 0.1, 1)} className='mt-3 text-primary text-[17px] max-w-3xl leading-[30px] p-5 rounded-md'>
+          <button variants={fadeIn('', '', 0.1, 1)} onClick={() => setActualProject(project)} className='bg-black font-ledger w-1/3 p-4' key={`project-${index}`}>{project.id}</button>
+        ))}
+      </div>
+
+      <div className=' w-[95%] bg-gray-100 flex-col '>
+
+        <p variants={fadeIn('', '', 0.1, 1)} className='mt-3 text-primary text-[17px] px-3 rounded-md'>
           {actualProject.description}
-        </motion.p>
-
-        <motion.div className='flex flex-col'>
-          {projects.map((project, index) => (
-
-            <button variants={fadeIn('', '', 0.1, 1)} onClick={() => setActualProject(project)} className='bg-black font-ledger p-4' key={`project-${index}`}>{project.id}</button>
-          ))}
-        </motion.div>
+        </p>
 
       </div>
 
