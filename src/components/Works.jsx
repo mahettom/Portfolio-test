@@ -15,7 +15,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
 
     <motion.div variants={fadeIn('up', 'spring', index + 1, 0.75)}>
 
-      {/* className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full' */}
+      className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
 
       <div className='relative w-full'>
 
@@ -47,7 +47,6 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
         ))}
       </div>
 
-      {/* </Tilt> */}
     </motion.div>
 
   )
@@ -78,7 +77,7 @@ const Works = () => {
         <motion.div className='flex flex-col'>
           {projects.map((project, index) => (
 
-            <button variants={fadeIn('', '', 0.1, 1)} onClick={() => setActualProject(project)} className='bg-black font-ledger p-4' key={`project-${index}`}>{project.name}</button>
+            <button variants={fadeIn('', '', 0.1, 1)} onClick={() => setActualProject(project)} className='bg-black font-ledger p-4' key={`project-${index}`}>{project.id}</button>
           ))}
         </motion.div>
 
@@ -86,11 +85,7 @@ const Works = () => {
 
       <div className='xs:mt-15 md:mt-20 mt-20 flex flex-wrap gap-7'>
 
-        {/* {projects.map((project, index) => ( */}
-
         <ProjectCard {...actualProject} />
-
-        {/* ))} */}
 
       </div>
     </>
