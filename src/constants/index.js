@@ -177,6 +177,7 @@ const projects = [
             },
         ],
         challenge: ["I had to start all over again on Wednesday except for the grid, because I keep thinking about new features and it got too complicated.", "Time management, didn't have time to style the game!", "Keeping track of all the class and their relationships together.", "For this project I was not use to read and understand errors in the console, but it trained me.", "Keep the code clean with a lot of classes."],
+        improvement: ["The overall style", "Make more comment for describe each step.", "Create some difficulty levels (more easy for beggining and improve after)."],
         image: pursuit,
         source_code_link: "https://github.com/",
     },
