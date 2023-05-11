@@ -71,7 +71,7 @@ const Works = () => {
       <div className='w-[95%] bg-gray-100 flex mt-10'>
 
         <motion.p variants={fadeIn('', '', 0.1, 1)} className='mt-3 text-primary text-[17px] max-w-3xl leading-[30px] p-5 rounded-md'>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo ex repellat blanditiis laudantium, eligendi est ipsa ipsam, obcaecati veritatis voluptatum facilis modi eaque excepturi. Dolores sunt ipsam laborum iusto porro.
+          {actualProject.description}
         </motion.p>
 
         <motion.div className='flex flex-col'>

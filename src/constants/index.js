@@ -161,7 +161,7 @@ const projects = [
         id: "Project 1",
         week: "Week 3",
         description:
-            "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+            "For the first project, we were asked to render a game in the browser. And he should have logic for winning and/or losing and show feedback to the player in either case.",
         tags: [
             {
                 name: "javascript",
