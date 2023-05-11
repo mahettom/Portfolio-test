@@ -164,15 +164,15 @@ const projects = [
             "For the first project, we were asked to render a game in the browser. And he should have logic for winning and/or losing and show feedback to the player in either case.",
         tags: [
             {
-                name: "javascript",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "mongodb",
+                name: "HTML",
                 color: "green-text-gradient",
             },
             {
-                name: "tailwind",
+                name: "CSS",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "javascript",
                 color: "pink-text-gradient",
             },
         ],
@@ -184,6 +184,7 @@ const projects = [
     {
         name: "Bigfoot Sightings",
         id: "Project 2",
+        week: "Week 8",
         description:
             "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
         tags: [
@@ -204,7 +205,7 @@ const projects = [
         source_code_link: "https://github.com/",
     },
     {
-        name: "Trip Guide",
+        name: "Code SOS",
         id: "Project 3",
         description:
             "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
