@@ -15,29 +15,24 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
 
     <motion.div variants={fadeIn('up', 'spring', index + 1, 0.75)}>
 
-      className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
-
-      <div className='relative w-3/5'>
-
-        <img src={image} alt={name} className='w-full h-full object-cover rounded-2xl' />
-
-        <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
+      <div className='relative w-full'>
+        <div className='absolute inset-0 flex justify-end m-3'>
           <div onClick={() => window.open(source_code_link, '_blank')} className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'>
-
             <img
               src={github}
               alt='github'
               className='w-1/2 h-1/2 object-contain'
             />
-
           </div>
         </div>
       </div>
 
       <div className='mt-5'>
-        <h3 className='text-white font-bold text-[24px]'>{name}</h3>
-        <p className='mt-2 text-secondary text-[14px]'>{description}</p>
+        <h3 className='text-primary font-bold text-[24px]'>{name}</h3>
+        <p className='mt-2 text-primary text-[14px]'>{description}</p>
       </div>
+
+      <img src={image} alt={name} className='w-3/5 h-full object-cover rounded-2xl' />
 
       <div className='mt-4 flex flex-wrap gap-2'>
         {tags.map((tag) => (
@@ -70,24 +65,20 @@ const Works = () => {
 
       <div className=' bg-black p-2 rounded-l rounded-r xs:mt-20 sm:mt-24 mt-40 w-[95%]'>
         {projects.map((project, index) => (
-
           <button variants={fadeIn('', '', 0.1, 1)} onClick={() => setActualProject(project)} className='bg-black font-ledger w-1/3 p-4' key={`project-${index}`}>{project.id}</button>
         ))}
       </div>
 
-      <div className=' w-[95%] bg-gray-100 flex-col '>
-
-        <p variants={fadeIn('', '', 0.1, 1)} className='mt-3 text-primary text-[17px] px-3 rounded-md'>
-          {actualProject.description}
-        </p>
-
-      </div>
-
-      <div className='xs:mt-15 md:mt-20 mt-20 flex flex-wrap gap-7'>
-
+      <div className='xs:mt-5 md:mt-10 mt-20 flex flex-wrap gap-7'>
         <ProjectCard {...actualProject} />
-
       </div>
+
+      <div className=' w-[95%] bg-gray-100 flex-col '>
+        <p variants={fadeIn('', '', 0.1, 1)} className='mt-3 text-primary text-[17px] px-3 rounded-md'>
+          {actualProject.requirement}
+        </p>
+      </div>
+
     </>
   )
 }
