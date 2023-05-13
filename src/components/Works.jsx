@@ -16,7 +16,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
     <motion.div variants={fadeIn('up', 'spring', index + 1, 0.75)}>
 
       <div className='relative w-full'>
-        <div className='absolute inset-0 flex justify-end m-3'>
+        <div className='absolute inset-0 flex justify-end m-3 xs:right-2 sm:right-4 md:right-5'>
           <div onClick={() => window.open(source_code_link, '_blank')} className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'>
             <img
               src={github}
@@ -30,9 +30,9 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
       <div className='mt-5'>
         <h3 className='text-primary font-bold text-[24px]'>{name}</h3>
         <p className='mt-2 text-primary text-[14px]'>{description}</p>
+        <img src={image} alt={name} className='w-3/5 h-full object-cover rounded-2xl' />
       </div>
 
-      <img src={image} alt={name} className='w-3/5 h-full object-cover rounded-2xl' />
 
       <div className='mt-4 flex flex-wrap gap-2'>
         {tags.map((tag) => (
@@ -69,16 +69,9 @@ const Works = () => {
         ))}
       </div>
 
-      <div className='xs:mt-5 md:mt-10 mt-20 flex flex-wrap gap-7'>
+      <div className='xs:mt-3 md:mt-10 mt-15 flex flex-wrap gap-7'>
         <ProjectCard {...actualProject} />
       </div>
-
-      <div className=' w-[95%] bg-gray-100 flex-col '>
-        <p variants={fadeIn('', '', 0.1, 1)} className='mt-3 text-primary text-[17px] px-3 rounded-md'>
-          {actualProject.requirement}
-        </p>
-      </div>
-
     </>
   )
 }
