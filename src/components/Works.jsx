@@ -28,7 +28,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
       </div>
 
       <div className='mt-5'>
-        <h3 className='text-primary font-bold text-[24px]'>{name}</h3>
+        {/* <h3 className='text-primary font-bold text-[24px]'>{name}</h3> */}
         <p className='mt-2 text-primary text-[14px]'>{description}</p>
         <img src={image} alt={name} className='w-3/5 h-full object-cover rounded-2xl' />
       </div>
@@ -62,15 +62,16 @@ const Works = () => {
         <h2 className={`${styles.sectionHeadText} text-primary`}>Project.</h2>
       </motion.div>
 
+      <div className='flex flex-row'>
+        <div className='flex flex-col justify-evenly bg-black p-2 rounded-l rounded-r xs:mt-10 sm:mt-15'>
+          {projects.map((project, index) => (
+            <button variants={fadeIn('', '', 0.1, 1)} onClick={() => setActualProject(project)} className='bg-black font-ledger p-4' key={`project-${index}`}>{project.name}</button>
+          ))}
+        </div>
 
-      <div className=' bg-black p-2 rounded-l rounded-r xs:mt-20 sm:mt-24 mt-40 w-[95%]'>
-        {projects.map((project, index) => (
-          <button variants={fadeIn('', '', 0.1, 1)} onClick={() => setActualProject(project)} className='bg-black font-ledger w-1/3 p-4' key={`project-${index}`}>{project.id}</button>
-        ))}
-      </div>
-
-      <div className='xs:mt-3 md:mt-10 mt-15 flex flex-wrap gap-7'>
-        <ProjectCard {...actualProject} />
+        <div className='xs:mt-3 md:mt-10 mt-15 flex flex-wrap gap-7'>
+          <ProjectCard {...actualProject} />
+        </div>
       </div>
     </>
   )
