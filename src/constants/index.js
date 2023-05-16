@@ -186,9 +186,9 @@ const projects = [
         id: "Project 2",
         week: "Week 8",
         description: "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-        requirement: "Requirement: For the first project, we were asked to render a game in the browser. And he should have logic for winning and/or losing and show feedback to the player in either case.",
-        challenge: ["I had to start all over again on Wednesday except for the grid, because I keep thinking about new features and it got too complicated.", "Time management, didn't have time to style the game!", "Keeping track of all the class and their relationships together.", "For this project I was not use to read and understand errors in the console, but it trained me.", "Keep the code clean with a lot of classes."],
-        improvement: ["The overall style", "Make more comment for describe each step.", "Create some difficulty levels (more easy for beggining and improve after)."],
+        requirement: [" Render a game in the browser.", "Should have logic for winning and/or losing.", "Show feedback to the player in either case."],
+        challenge: ["I had to start all over again on Wednesday except for the grid", "Time management, didn't have time to style the game!", "Keeping track of all the class and their relationships together.", "For this project I was not use to read and understand errors in the console, but it trained me.", "Keep the code clean with a lot of classes."],
+        improvement: ["The overall style", "Make more comment for describe each step.", "Create some difficulty levels."],
         image: sightings,
         source_code_link: "https://github.com/",
         tags: [
