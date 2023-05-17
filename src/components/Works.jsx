@@ -10,6 +10,8 @@ import { github } from '../assets'
 
 const ProjectCard = ({ name, id, week, description, requirement, challenge, improvement, image, source_code_link, tags }) => {
 
+  const actualProject = { name, id, week, description, requirement, challenge, improvement, image, source_code_link, tags }
+
   const [toDisplay, setToDisplay] = useState(null)
 
 
@@ -30,13 +32,21 @@ const ProjectCard = ({ name, id, week, description, requirement, challenge, impr
         </div>
       </div>
 
+
       {/* Think about how to render */}
+      {/* Need to be scalable and clean */}
 
 
 
       <div className=''>
         <p className='text-primary font-ledger text-[16px] text-center'>{description}</p>
         <img src={image} alt={name} className='w-1/3 h-full object-cover rounded-2xl m-auto' />
+      </div>
+
+      <div className='flex flex-col justify-evenly'>
+        {actualProject.forEach((point) => {
+          <h1>point</h1>
+        })}
       </div>
 
 
@@ -65,6 +75,7 @@ const Works = () => {
 
 
       <div className='flex flex-row py-36'>
+
         <div className='flex flex-col justify-evenly'>
           {projects.map((project, index) => (
             <button variants={fadeIn('', '', 0.1, 1)} onClick={() => setActualProject(project)} className='font-ledger text-primary p-5 border-4 rounded-md shadow-inner' key={`project-${index}`}>{project.name}</button>
@@ -74,6 +85,7 @@ const Works = () => {
         <div className='flex flex-col'>
           <ProjectCard {...actualProject} />
         </div>
+
       </div>
     </>
   )
