@@ -15,7 +15,8 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
 
     <>
       <div className='relative w-full'>
-        <div className='absolute inset-0 flex justify-end m-3 xs:right-2 sm:right-4 md:right-5'>
+        <div className='absolute flex justify-end xs:right-2 sm:right-4 md:right-5'>
+
           <div onClick={() => window.open(source_code_link, '_blank')} className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'>
             <img
               src={github}
@@ -23,23 +24,20 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
               className='w-1/2 h-1/2 object-contain'
             />
           </div>
+
         </div>
       </div>
 
-      <div className='mt-5'>
-        {/* <h3 className='text-primary font-bold text-[24px]'>{name}</h3> */}
-        <p className='mt-2 text-primary text-[14px]'>{description}</p>
-        <img src={image} alt={name} className='w-3/5 h-full object-cover rounded-2xl' />
+      {/* Think about how to render */}
+
+      <div className=''>
+        <p className='text-primary font-ledger text-[16px] text-center'>{description}</p>
+        <img src={image} alt={name} className='w-1/3 h-full object-cover rounded-2xl m-auto' />
       </div>
 
 
-      <div className='mt-4 flex flex-wrap gap-2'>
-        {tags.map((tag) => (
-          <p key={tag.name} className={`text-[14px] ${tag.color}`}>
-            {tag.name}
-          </p>
-        ))}
-      </div>
+
+
     </>
 
 
@@ -61,14 +59,15 @@ const Works = () => {
         <h2 className={`${styles.sectionHeadText} text-primary`}>Project.</h2>
       </motion.div>
 
-      <div className='flex flex-row'>
-        <div className='flex flex-col justify-evenly bg-black p-2 rounded-l rounded-r xs:mt-10 sm:mt-15'>
+
+      <div className='flex flex-row py-36'>
+        <div className='flex flex-col justify-evenly'>
           {projects.map((project, index) => (
-            <button variants={fadeIn('', '', 0.1, 1)} onClick={() => setActualProject(project)} className='bg-black font-ledger p-4' key={`project-${index}`}>{project.name}</button>
+            <button variants={fadeIn('', '', 0.1, 1)} onClick={() => setActualProject(project)} className='font-ledger text-primary p-5 border-4 rounded-md shadow-inner' key={`project-${index}`}>{project.name}</button>
           ))}
         </div>
 
-        <div className='xs:mt-3 md:mt-10 mt-15 flex flex-wrap gap-7'>
+        <div className='flex flex-col'>
           <ProjectCard {...actualProject} />
         </div>
       </div>
