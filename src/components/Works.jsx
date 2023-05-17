@@ -8,7 +8,9 @@ import { styles } from '../styles'
 import { github } from '../assets'
 
 
-const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => {
+const ProjectCard = ({ name, id, week, description, requirement, challenge, improvement, image, source_code_link, tags }) => {
+
+  const [toDisplay, setToDisplay] = useState(null)
 
 
   return (
@@ -29,6 +31,8 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
       </div>
 
       {/* Think about how to render */}
+
+
 
       <div className=''>
         <p className='text-primary font-ledger text-[16px] text-center'>{description}</p>
