@@ -8,6 +8,8 @@ import { styles } from '../styles'
 import { github } from '../assets'
 
 
+
+
 const ProjectCard = ({ name, id, week, description, requirement, challenge, improvement, image, source_code_link, tags }) => {
 
   const actualProject = { name, id, week, description, requirement, challenge, improvement, image, source_code_link, tags }
@@ -35,6 +37,7 @@ const ProjectCard = ({ name, id, week, description, requirement, challenge, impr
 
       {/* Think about how to render */}
       {/* Need to be scalable and clean */}
+      {/* implement for in */}
 
 
 
@@ -44,9 +47,12 @@ const ProjectCard = ({ name, id, week, description, requirement, challenge, impr
       </div>
 
       <div className='flex flex-col justify-evenly'>
-        {actualProject.forEach((point) => {
-          <h1>point</h1>
-        })}
+
+        {/* {for (const property of actualProject) {
+          console.log(`${property}: ${actualProject[property]}`)
+        }} */}
+
+
       </div>
 
 
