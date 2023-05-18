@@ -157,7 +157,7 @@ const experiences = [
 
 const projects = [
     {
-        name: "Pixel pursuit",
+        name: "Pixel Pursuit",
         id: "Project 1",
         week: "Week 3",
         description: "Catch the points without collide with a ennemy",

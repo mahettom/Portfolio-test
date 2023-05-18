@@ -10,22 +10,7 @@ import { github } from '../assets'
 
 
 
-const ProjectCard = ({ name, id, week, description, requirement, challenge, improvement, image, source_code_link, tags }) => {
-
-  const actualProject = { name, id, week, description, requirement, challenge, improvement, image, source_code_link, tags }
-
-  const [toDisplay, setToDisplay] = useState(null)
-
-  // const getDisplayContent = animals => {
-  //   let content = [];
-  //   for (let idx in animals) {
-  //     const item = animals[idx];
-  //     content.push(<li key={item.id}>{item.animal}</li>);
-  //   }
-  //   return content;
-  // };
-
-  // return <ul>{getAnimalsContent(animals)}</ul>;
+const ProjectCard = (actualProject, infoToDisplay) => {
 
 
   return (
@@ -46,26 +31,20 @@ const ProjectCard = ({ name, id, week, description, requirement, challenge, impr
       </div>
 
 
-      {/* Think about how to render */}
-      {/* Need to be scalable and clean */}
-      {/* implement for in */}
+      {/*
+            Need to check if there is already an info to info to display
+
+            If YES takethe info from the infoToDisplay useState & display it
+
+            If NOT just render the description & name & image of project 
+      */}
 
 
 
       <div className=''>
-        <p className='text-primary font-ledger text-[16px] text-center'>{description}</p>
-        <img src={image} alt={name} className='w-1/3 h-full object-cover rounded-2xl m-auto' />
+        <p className='text-primary font-ledger text-[16px] text-center'>{actualProject.description}</p>
+        <img src={actualProject.image} alt={actualProject.name} className='w-1/3 h-full object-cover rounded-2xl m-auto' />
       </div>
-
-      <div className='flex flex-col justify-evenly'>
-
-        {/* {for (const property of actualProject) {
-          console.log(`${property}: ${actualProject[property]}`)
-        }} */}
-
-
-      </div>
-
 
 
 
@@ -94,19 +73,20 @@ const Works = () => {
 
       <div className='flex flex-row py-36'>
 
-        <div className='flex flex-col justify-evenly'>
+        <div className='flex flex-col justify-evenly items-center'>
           {projects.map((project, index) => (
-            <button onClick={() => setActualProject(project)} className='font-ledger text-primary p-5 border-4 rounded-md shadow-inner' key={`project-${index}`}>{project.name}</button>
+            <button onClick={() => setActualProject(project)} className='font-ledger text-primary w-56 p-5 border-4 rounded-md shadow-inner' key={`project-${index}`}>{project.name}</button>
           ))}
         </div>
 
-        { }
         <div className='flex flex-col'>
-          <ProjectCard {...actualProject} />
+          <ProjectCard {...actualProject} {...infoToDisplay} />
         </div>
 
         <div className='flex flex-col justify-evenly'>
-          <button></button>
+          <button onClick={() => setInfoToDisplay('requirement')} className='font-ledger text-primary p-5 border-4 rounded-md shadow-inner'>Requirement</button>
+          <button onClick={() => setInfoToDisplay('requirement')} className='font-ledger text-primary p-5 border-4 rounded-md shadow-inner'>Challenge</button>
+          <button onClick={() => setInfoToDisplay('requirement')} className='font-ledger text-primary p-5 border-4 rounded-md shadow-inner'>Improvement</button>
         </div>
 
       </div>
