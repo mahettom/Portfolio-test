@@ -43,37 +43,37 @@ const About = () => {
 
   // const galleryRef = useRef(null)
 
-  useEffect(() => {
+  // useEffect(() => {
 
-    const track = document.getElementById('image-track')
+  //   const track = document.getElementById('image-track')
 
-    window.onmousedown = event => {
+  //   window.onmousedown = event => {
 
-      track.dataset.mouseDownAt = event.clientX
-    }
+  //     track.dataset.mouseDownAt = event.clientX
+  //   }
 
-    window.onmousemove = event => {
-      if (track.dataset.mouseDownAt === '0') return;
+  //   window.onmousemove = event => {
+  //     if (track.dataset.mouseDownAt === '0') return;
 
-      const mouseDelta = parseFloat(track.dataset.mouseDownAt) - event.clientX
-      const maxDelta = window.innerWidth / 2
+  //     const mouseDelta = parseFloat(track.dataset.mouseDownAt) - event.clientX
+  //     const maxDelta = window.innerWidth / 2
 
-      const percentage = (mouseDelta / maxDelta) * -100
-      const nextPercentage = parseFloat(track.dataset.prevPercentage) + percentage
+  //     const percentage = (mouseDelta / maxDelta) * -100
+  //     const nextPercentage = parseFloat(track.dataset.prevPercentage) + percentage
 
-      track.dataset.percentage = nextPercentage
+  //     track.dataset.percentage = nextPercentage
 
-      track.style.transform = `translate(${nextPercentage}%, -50%)`
-    }
+  //     track.style.transform = `translate(${nextPercentage}%, -50%)`
+  //   }
 
-    window.onmouseup = event => {
+  //   window.onmouseup = event => {
 
-      track.dataset.mouseDownAt = '0'
-      track.dataset.prevPercentage = track.dataset.percentage
-    }
+  //     track.dataset.mouseDownAt = '0'
+  //     track.dataset.prevPercentage = track.dataset.percentage
+  //   }
 
 
-  }, [])
+  // }, [])
 
 
   return (

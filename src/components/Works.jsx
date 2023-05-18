@@ -16,6 +16,17 @@ const ProjectCard = ({ name, id, week, description, requirement, challenge, impr
 
   const [toDisplay, setToDisplay] = useState(null)
 
+  // const getDisplayContent = animals => {
+  //   let content = [];
+  //   for (let idx in animals) {
+  //     const item = animals[idx];
+  //     content.push(<li key={item.id}>{item.animal}</li>);
+  //   }
+  //   return content;
+  // };
+
+  // return <ul>{getAnimalsContent(animals)}</ul>;
+
 
   return (
 
@@ -69,6 +80,7 @@ const ProjectCard = ({ name, id, week, description, requirement, challenge, impr
 const Works = () => {
 
   const [actualProject, setActualProject] = useState(projects[0])
+  const [infoToDisplay, setInfoToDisplay] = useState(null)
 
 
 
@@ -84,12 +96,17 @@ const Works = () => {
 
         <div className='flex flex-col justify-evenly'>
           {projects.map((project, index) => (
-            <button variants={fadeIn('', '', 0.1, 1)} onClick={() => setActualProject(project)} className='font-ledger text-primary p-5 border-4 rounded-md shadow-inner' key={`project-${index}`}>{project.name}</button>
+            <button onClick={() => setActualProject(project)} className='font-ledger text-primary p-5 border-4 rounded-md shadow-inner' key={`project-${index}`}>{project.name}</button>
           ))}
         </div>
 
+        { }
         <div className='flex flex-col'>
           <ProjectCard {...actualProject} />
+        </div>
+
+        <div className='flex flex-col justify-evenly'>
+          <button></button>
         </div>
 
       </div>
