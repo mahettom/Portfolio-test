@@ -8,7 +8,7 @@ import { styles } from "../styles"
 const ExperienceCard = ({ experience }) => (
 
   <div className="p-10">
-    <div className="p-3 border-double border-8 border-primary rounded">
+    <div className="p-3 border-double border-8 border-primary rounded-t">
       <h3 className='text-primary font-ledger text-[24px] font-bold'>{experience.title}</h3>
       <p className="text-primary font-ledger text-[16px] font-semibold" style={{ margin: 0 }}>{experience.company_name}</p>
     </div>

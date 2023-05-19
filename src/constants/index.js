@@ -157,30 +157,40 @@ const experiences = [
 
 const projects = [
     {
-        name: "Pixel pursuit",
-        description:
-            "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+        name: "Pixel Pursuit",
+        id: "Project 1",
+        week: "Week 3",
+        description: "Catch the points without collide with a ennemy",
+        requirement: ["For the first project, we were asked to render a game in the browser.", "He should have logic for winning and/or losing.", "Show feedback to the player in either case."],
+        challenge: ["I had to start all over again on Wednesday except for the grid, because I keep thinking about new features and it got too complicated.", "Time management, didn't have time to style the game!", "Keeping track of all the class and their relationships together.", "For this project I was not use to read and understand errors in the console, but it trained me.", "Keep the code clean with a lot of classes."],
+        improvement: ["The overall style", "Make more comment for describe each step.", "Create some difficulty levels (more easy for beggining and improve after)."],
+        image: pursuit,
+        source_code_link: "https://github.com/",
         tags: [
             {
-                name: "javascript",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "mongodb",
+                name: "HTML",
                 color: "green-text-gradient",
             },
             {
-                name: "tailwind",
+                name: "CSS",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "javascript",
                 color: "pink-text-gradient",
             },
         ],
-        image: pursuit,
-        source_code_link: "https://github.com/",
     },
     {
-        name: "Job IT",
-        description:
-            "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+        name: "Bigfoot Sightings",
+        id: "Project 2",
+        week: "Week 8",
+        description: "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+        requirement: [" Render a game in the browser.", "Should have logic for winning and/or losing.", "Show feedback to the player in either case."],
+        challenge: ["I had to start all over again on Wednesday except for the grid", "Time management, didn't have time to style the game!", "Keeping track of all the class and their relationships together.", "For this project I was not use to read and understand errors in the console, but it trained me.", "Keep the code clean with a lot of classes."],
+        improvement: ["The overall style", "Make more comment for describe each step.", "Create some difficulty levels."],
+        image: sightings,
+        source_code_link: "https://github.com/",
         tags: [
             {
                 name: "react",
@@ -195,13 +205,14 @@ const projects = [
                 color: "pink-text-gradient",
             },
         ],
-        image: sightings,
-        source_code_link: "https://github.com/",
     },
     {
-        name: "Trip Guide",
-        description:
-            "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+        name: "Code SOS",
+        id: "Project 3",
+        description: "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+        requirement: ["For the first project, we were asked to render a game in the browser.", "He should have logic for winning and/or losing. Show feedback to the player in either case."],
+        challenge: ["I had to start all over again on Wednesday except for the grid, because I keep thinking about new features and it got too complicated.", "Time management, didn't have time to style the game!", "Keeping track of all the class and their relationships together.", "For this project I was not use to read and understand errors in the console, but it trained me.", "Keep the code clean with a lot of classes."],
+        improvement: ["The overall style", "Make more comment for describe each step.", "Create some difficulty levels (more easy for beggining and improve after)."],
         tags: [
             {
                 name: "nextjs",

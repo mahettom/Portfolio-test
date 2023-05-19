@@ -12,7 +12,7 @@ const App = () => {
         <Hero />
         <About />
 
-        <div className="bg-white overflow-hidden m-0 h-full w-screen">
+        <div className="bg-white overflow-hidden m-0 w-screen">
           <Experience />
           <Works />
         </div>

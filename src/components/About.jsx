@@ -43,37 +43,37 @@ const About = () => {
 
   // const galleryRef = useRef(null)
 
-  useEffect(() => {
+  // useEffect(() => {
 
-    const track = document.getElementById('image-track')
+  //   const track = document.getElementById('image-track')
 
-    window.onmousedown = event => {
+  //   window.onmousedown = event => {
 
-      track.dataset.mouseDownAt = event.clientX
-    }
+  //     track.dataset.mouseDownAt = event.clientX
+  //   }
 
-    window.onmousemove = event => {
-      if (track.dataset.mouseDownAt === '0') return;
+  //   window.onmousemove = event => {
+  //     if (track.dataset.mouseDownAt === '0') return;
 
-      const mouseDelta = parseFloat(track.dataset.mouseDownAt) - event.clientX
-      const maxDelta = window.innerWidth / 2
+  //     const mouseDelta = parseFloat(track.dataset.mouseDownAt) - event.clientX
+  //     const maxDelta = window.innerWidth / 2
 
-      const percentage = (mouseDelta / maxDelta) * -100
-      const nextPercentage = parseFloat(track.dataset.prevPercentage) + percentage
+  //     const percentage = (mouseDelta / maxDelta) * -100
+  //     const nextPercentage = parseFloat(track.dataset.prevPercentage) + percentage
 
-      track.dataset.percentage = nextPercentage
+  //     track.dataset.percentage = nextPercentage
 
-      track.style.transform = `translate(${nextPercentage}%, -50%)`
-    }
+  //     track.style.transform = `translate(${nextPercentage}%, -50%)`
+  //   }
 
-    window.onmouseup = event => {
+  //   window.onmouseup = event => {
 
-      track.dataset.mouseDownAt = '0'
-      track.dataset.prevPercentage = track.dataset.percentage
-    }
+  //     track.dataset.mouseDownAt = '0'
+  //     track.dataset.prevPercentage = track.dataset.percentage
+  //   }
 
 
-  }, [])
+  // }, [])
 
 
   return (
@@ -93,13 +93,13 @@ const About = () => {
         Et je voudrais maintenant:
       </motion.p>
 
-      <div id='image-track' className={`flex gap-[4vmin] absolute left-1/2 top-1/2 -translate-y-[50%]`} data-mouse-down-at='0' data-prev-percentage='0'>
+      {/* <div id='image-track' className={`flex gap-[4vmin] absolute left-1/2 top-1/2 -translate-y-[50%]`} data-mouse-down-at='0' data-prev-percentage='0'>
         <img className='w-[40vmin] h-[56vmin] object-cover object-center' src="https://images.unsplash.com/photo-1608346128025-1896b97a6fa7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Picture-1" draggable={false} />
         <img className='w-[40vmin] h-[56vmin] object-cover object-center' src="https://images.unsplash.com/photo-1618336753974-aae8e04506aa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Picture-2" draggable={false} />
         <img className='w-[40vmin] h-[56vmin] object-cover object-center' src="https://images.unsplash.com/photo-1682578566205-1dc0d51d978c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=686&q=80" alt="Picture-3" draggable={false} />
         <img className='w-[40vmin] h-[56vmin] object-cover object-center' src="https://images.unsplash.com/photo-1680504960958-f87a8cdb767a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80" alt="Picture-4" draggable={false} />
         <img className='w-[40vmin] h-[56vmin] object-cover object-center' src="https://images.unsplash.com/photo-1598040795256-03d22d952f4d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="Picture-5" draggable={false} />
-      </div>
+      </div> */}
 
 
 
