@@ -10,8 +10,13 @@ import { github } from '../assets'
 
 
 
-const ProjectCard = (actualProject, infoToDisplay) => {
+const ProjectCard = (project) => {
 
+  const info = project.info
+
+
+
+  console.log('project ------->', info)
 
   return (
 
@@ -37,25 +42,25 @@ const ProjectCard = (actualProject, infoToDisplay) => {
             If NOT just render the description & name & image of project 
       */}
 
-      {infoToDisplay === 
+      <div>
+        <p className='text-primary font-ledger text-[16px] text-center'>{project.description}</p>
+        <img src={project.image} alt={project.name} className='w-1/3 h-full object-cover rounded-2xl m-auto' />
+      </div>
+      {/* {info
 
         ?
 
-        <ul className='text-primary font-ledger text-[16px]'>
-          {/* {infoToDisplay.map(element => {
-            <li>{actualProject.element}</li>
-          })} */}
-          <li>{actualProject.requirement}</li>
-        </ul>
 
         :
 
-        <div className=''>
-          <p className='text-primary font-ledger text-[16px] text-center'>{actualProject.description}</p>
-          <img src={actualProject.image} alt={actualProject.name} className='w-1/3 h-full object-cover rounded-2xl m-auto' />
-        </div>
+        <ul className='text-primary font-ledger text-[16px]'>
+          {infoToDisplay.map(element => {
+            <li>{actualProject.element}</li>
+          })}
+      <li>{infoToDisplay}</li>
+    </ul >
 
-      }
+      } */}
 
 
 
@@ -71,9 +76,22 @@ const ProjectCard = (actualProject, infoToDisplay) => {
 const Works = () => {
 
   const [actualProject, setActualProject] = useState(projects[0])
+  const [requirement, setRequirement] = useState(actualProject.requirement)
+  const [improvement, setImprovement] = useState(actualProject.improvement)
+  const [challenge, setChallenge] = useState(actualProject.challenge)
+
   const [infoToDisplay, setInfoToDisplay] = useState(null)
 
 
+  // useEffect(() => {
+
+  //   setInfoToDisplay(null)
+
+
+
+  // }, [actualProject])
+
+  console.log('__________', infoToDisplay);
 
   return (
     <>
@@ -92,13 +110,13 @@ const Works = () => {
         </div>
 
         <div className='flex flex-col'>
-          <ProjectCard {...actualProject} {...infoToDisplay} />
+          <ProjectCard project={actualProject} info={infoToDisplay} />
         </div>
 
         <div className='flex flex-col justify-evenly'>
-          <button onClick={() => setInfoToDisplay(actualProject.requirement)} className='font-ledger text-primary p-5 border-4 rounded-md shadow-inner'>Requirement</button>
-          <button onClick={() => setInfoToDisplay(actualProject.challenge)} className='font-ledger text-primary p-5 border-4 rounded-md shadow-inner'>Challenge</button>
-          <button onClick={() => setInfoToDisplay(actualProject.improvement)} className='font-ledger text-primary p-5 border-4 rounded-md shadow-inner'>Improvement</button>
+          <button onClick={() => setInfoToDisplay(requirement)} className='font-ledger text-primary p-5 border-4 rounded-md shadow-inner'>Requirement</button>
+          <button onClick={() => setInfoToDisplay(challenge)} className='font-ledger text-primary p-5 border-4 rounded-md shadow-inner'>Challenge</button>
+          <button onClick={() => setInfoToDisplay(improvement)} className='font-ledger text-primary p-5 border-4 rounded-md shadow-inner'>Improvement</button>
         </div>
 
       </div>

@@ -161,7 +161,7 @@ const projects = [
         id: "Project 1",
         week: "Week 3",
         description: "Catch the points without collide with a ennemy",
-        requirement: ["For the first project, we were asked to render a game in the browser.", "He should have logic for winning and/or losing. Show feedback to the player in either case."],
+        requirement: ["For the first project, we were asked to render a game in the browser.", "He should have logic for winning and/or losing.", "Show feedback to the player in either case."],
         challenge: ["I had to start all over again on Wednesday except for the grid, because I keep thinking about new features and it got too complicated.", "Time management, didn't have time to style the game!", "Keeping track of all the class and their relationships together.", "For this project I was not use to read and understand errors in the console, but it trained me.", "Keep the code clean with a lot of classes."],
         improvement: ["The overall style", "Make more comment for describe each step.", "Create some difficulty levels (more easy for beggining and improve after)."],
         image: pursuit,
