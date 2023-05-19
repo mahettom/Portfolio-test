@@ -12,16 +12,9 @@ import { github } from '../assets'
 
 const ProjectCard = (project) => {
 
-  const infoTodisplay = project.info
+  const infoToDisplay = project.info
 
-  // const info = props.info
-  // const project = props.project
-
-
-
-
-  // console.log('project ------->', project)
-  // console.log('info ______||', infoTodisplay);
+  console.log(infoToDisplay)
 
   return (
 
@@ -38,16 +31,7 @@ const ProjectCard = (project) => {
         </div>
       </div>
 
-
-      {/*
-            Need to check if there is already an info to info to display
-
-            If YES take the info from the infoToDisplay useState & display it
-
-            If NOT just render the description & name & image of project 
-      */}
-
-      {!infoTodisplay
+      {!infoToDisplay
 
         ?
 
@@ -59,20 +43,11 @@ const ProjectCard = (project) => {
         :
 
         <ul className='text-primary font-ledger text-[16px]'>
-          {/* {infoToDisplay.map(element => {
-            <li>{actualProject.element}</li>
-          })} */}
-          <li>haha</li>
+          {infoToDisplay.map((info, index) => <li key={index} className='text-primary font-ledger text-[16px]'>{info}</li>)}
         </ul >
 
       }
-
-
-
-
     </>
-
-
   )
 }
 
@@ -88,15 +63,16 @@ const Works = () => {
   const [infoToDisplay, setInfoToDisplay] = useState(null)
 
 
-  // useEffect(() => {
+  useEffect(() => {
 
-  //   setInfoToDisplay(null)
+    setInfoToDisplay(null)
+    setRequirement(actualProject.requirement)
+    setChallenge(actualProject.challenge)
+    setImprovement(actualProject.improvement)
+
+  }, [actualProject])
 
 
-
-  // }, [actualProject])
-
-  // console.log('__________', infoToDisplay);
 
   return (
     <>
