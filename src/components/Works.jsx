@@ -12,11 +12,16 @@ import { github } from '../assets'
 
 const ProjectCard = (project) => {
 
-  const info = project.info
+  const infoTodisplay = project.info
+
+  // const info = props.info
+  // const project = props.project
 
 
 
-  console.log('project ------->', info)
+
+  // console.log('project ------->', project)
+  // console.log('info ______||', infoTodisplay);
 
   return (
 
@@ -42,25 +47,25 @@ const ProjectCard = (project) => {
             If NOT just render the description & name & image of project 
       */}
 
-      <div>
-        <p className='text-primary font-ledger text-[16px] text-center'>{project.description}</p>
-        <img src={project.image} alt={project.name} className='w-1/3 h-full object-cover rounded-2xl m-auto' />
-      </div>
-      {/* {info
+      {!infoTodisplay
 
         ?
 
+        <div>
+          <p className='text-primary font-ledger text-[16px] text-center'>{project.description}</p>
+          <img src={project.image} alt={project.name} className='w-1/3 h-full object-cover rounded-2xl m-auto' />
+        </div>
 
         :
 
         <ul className='text-primary font-ledger text-[16px]'>
-          {infoToDisplay.map(element => {
+          {/* {infoToDisplay.map(element => {
             <li>{actualProject.element}</li>
-          })}
-      <li>{infoToDisplay}</li>
-    </ul >
+          })} */}
+          <li>haha</li>
+        </ul >
 
-      } */}
+      }
 
 
 
@@ -91,7 +96,7 @@ const Works = () => {
 
   // }, [actualProject])
 
-  console.log('__________', infoToDisplay);
+  // console.log('__________', infoToDisplay);
 
   return (
     <>
@@ -110,7 +115,7 @@ const Works = () => {
         </div>
 
         <div className='flex flex-col'>
-          <ProjectCard project={actualProject} info={infoToDisplay} />
+          <ProjectCard {...actualProject} info={infoToDisplay} />
         </div>
 
         <div className='flex flex-col justify-evenly'>
