@@ -186,7 +186,7 @@ const projects = [
         id: "Project 2",
         week: "Week 8",
         description: "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-        requirement: [" Render a game in the browser.", "Should have logic for winning and/or losing.", "Show feedback to the player in either case."],
+        requirement: ["Encrypted passwords and authorization (logged in users can do extra things).", "Use Mongoose for models and database communication.", "Show feedback to the player in either case.", "Have at least 2 models.", "Feedback for users if their submission is invalid.", "Use Express as a foundation.", "Implement all CRUD actions on models other than users."],
         challenge: ["I had to start all over again on Wednesday except for the grid", "Time management, didn't have time to style the game!", "Keeping track of all the class and their relationships together.", "For this project I was not use to read and understand errors in the console, but it trained me.", "Keep the code clean with a lot of classes."],
         improvement: ["The overall style", "Make more comment for describe each step.", "Create some difficulty levels."],
         image: sightings,
@@ -210,9 +210,9 @@ const projects = [
         name: "Code SOS",
         id: "Project 3",
         description: "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-        requirement: ["For the first project, we were asked to render a game in the browser.", "He should have logic for winning and/or losing. Show feedback to the player in either case."],
-        challenge: ["I had to start all over again on Wednesday except for the grid, because I keep thinking about new features and it got too complicated.", "Time management, didn't have time to style the game!", "Keeping track of all the class and their relationships together.", "For this project I was not use to read and understand errors in the console, but it trained me.", "Keep the code clean with a lot of classes."],
-        improvement: ["The overall style", "Make more comment for describe each step.", "Create some difficulty levels (more easy for beggining and improve after)."],
+        requirement: ["Implementing all CRUD actions.", "Have a REST API backend built with ExpressJS, MongoDB and Mongoose, that your React app will communicate with.", "Have a REST API backend with routes that perform all CRUD actions for at least one model (excluding the user model).", "Have 3 database models or more. Having one model for users is the first step. The other two (or more) models should represent the main functionality of your app.", "Include sign-up, log-in and log-out functionality with encrypted passwords (or social login) and authorization (logged-in users can do additional things).", "Have two separate repos on GitHub. One repo is for your frontend React application and the other is for your backend REST API."],
+        challenge: ["Time management.", "The authentification part take us more time that we expect (Json Web Token)", "I spent quite some time on Postman checking the route during the last days, because of a error I made on github"],
+        improvement: ["Make the application more clear to read and more scalable using a lot of components", "Make more comment for describe each step.", "The choice of the model :", "at first we want the tutor to have a specific model. Inside of witch he had technologies, yearsOfExperience, studentHelpCount, isAvailable...", "in his profile he could checked the I'm available checkbox and be display on the page where all tutor available are.", "student can, once on that page sort or filter the tutors available by yearsOfExperience or technologie", "Use a tool like Trello for keeping track of what needs to be done and what is not worth it."],
         tags: [
             {
                 name: "nextjs",
