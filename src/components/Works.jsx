@@ -21,7 +21,7 @@ const ProjectCard = (project) => {
     <>
       <div className='relative w-full'>
         <div className='absolute flex justify-end xs:right-2 sm:right-4 md:right-5'>
-          <div onClick={() => window.open(source_code_link, '_blank')} className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'>
+          <div onClick={() => window.open(project.source_code_link, '_blank')} className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'>
             <img
               src={github}
               alt='github'

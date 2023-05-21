@@ -165,7 +165,7 @@ const projects = [
         challenge: ["I had to start all over again on Wednesday except for the grid, because I keep thinking about new features and it got too complicated.", "Time management, didn't have time to style the game!", "Keeping track of all the class and their relationships together.", "For this project I was not use to read and understand errors in the console, but it trained me.", "Keep the code clean with a lot of classes."],
         improvement: ["The overall style", "Make more comment for describe each step.", "Create some difficulty levels (more easy for beggining and improve after)."],
         image: pursuit,
-        source_code_link: "https://github.com/",
+        source_code_link: "https://github.com/mahettom/Pixel-Pursuit",
         tags: [
             {
                 name: "HTML",
@@ -190,7 +190,7 @@ const projects = [
         challenge: ["I had to start all over again on Wednesday except for the grid", "Time management, didn't have time to style the game!", "Keeping track of all the class and their relationships together.", "For this project I was not use to read and understand errors in the console, but it trained me.", "Keep the code clean with a lot of classes."],
         improvement: ["The overall style", "Make more comment for describe each step.", "Create some difficulty levels."],
         image: sightings,
-        source_code_link: "https://github.com/",
+        source_code_link: "https://github.com/keifershearer/BigFoot_Sightings",
         tags: [
             {
                 name: "react",
@@ -228,7 +228,7 @@ const projects = [
             },
         ],
         image: code,
-        source_code_link: "https://github.com/",
+        source_code_link: "https://github.com/mahettom/code-sos-backend",
     },
 ];
 
