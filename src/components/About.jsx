@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react'
-import Tilt from 'react-parallax-tilt'
+// import Tilt from 'react-parallax-tilt'
 import { styles } from '../styles'
 import { motion } from 'framer-motion'
-import { services } from '../constants'
+import { objectifs } from '../constants'
 import { SectionWrapper } from '../hoc'
 import { fadeIn, textVariant } from '../utils/motion'
 
@@ -10,70 +10,32 @@ import { fadeIn, textVariant } from '../utils/motion'
 const ServiceCard = ({ index, title, icon }) => {
   return (
 
-    <Tilt className='xs:w-[260px] w-full'>
+    // <Tilt className='xs:w-[260px] w-full'>
 
-      <motion.div
-        variants={fadeIn('right', 'spring', 0.5 * index, 0.75)}
-        className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'>
+    <motion.div
+      variants={fadeIn('right', 'spring', 0.5 * index, 0.75)}
+      className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'>
 
-        <div
-          className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
-          option={{
-            max: 45,
-            scale: 1,
-            speed: 450
-          }}
-        >
-          <img src={icon} alt={title} className='w-16 h-16 object-contain' />
-          <h3 className='text-white text-[20px] font-bold text-center'>{title}</h3>
-        </div>
+      <div
+        className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
+        option={{
+          max: 45,
+          scale: 1,
+          speed: 450
+        }}
+      >
+        <img src={icon} alt={title} className='w-16 h-16 object-contain' />
+        <h3 className='text-white text-[20px] font-bold text-center'>{title}</h3>
+      </div>
 
-      </motion.div>
+    </motion.div>
 
-    </Tilt>
+    // {/* </Tilt> */}
   )
 }
 
 
 const About = () => {
-
-  // const [mouseInitialPosition, setMouseInitialPosition] = useState(0)
-  // const [mouseActualPosition, setMouseActualPosition] = useState(null)
-  // const [percentage, setPercentage] = useState(0)
-
-  // const galleryRef = useRef(null)
-
-  // useEffect(() => {
-
-  //   const track = document.getElementById('image-track')
-
-  //   window.onmousedown = event => {
-
-  //     track.dataset.mouseDownAt = event.clientX
-  //   }
-
-  //   window.onmousemove = event => {
-  //     if (track.dataset.mouseDownAt === '0') return;
-
-  //     const mouseDelta = parseFloat(track.dataset.mouseDownAt) - event.clientX
-  //     const maxDelta = window.innerWidth / 2
-
-  //     const percentage = (mouseDelta / maxDelta) * -100
-  //     const nextPercentage = parseFloat(track.dataset.prevPercentage) + percentage
-
-  //     track.dataset.percentage = nextPercentage
-
-  //     track.style.transform = `translate(${nextPercentage}%, -50%)`
-  //   }
-
-  //   window.onmouseup = event => {
-
-  //     track.dataset.mouseDownAt = '0'
-  //     track.dataset.prevPercentage = track.dataset.percentage
-  //   }
-
-
-  // }, [])
 
 
   return (
@@ -93,20 +55,9 @@ const About = () => {
         Et je voudrais maintenant:
       </motion.p>
 
-      {/* <div id='image-track' className={`flex gap-[4vmin] absolute left-1/2 top-1/2 -translate-y-[50%]`} data-mouse-down-at='0' data-prev-percentage='0'>
-        <img className='w-[40vmin] h-[56vmin] object-cover object-center' src="https://images.unsplash.com/photo-1608346128025-1896b97a6fa7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Picture-1" draggable={false} />
-        <img className='w-[40vmin] h-[56vmin] object-cover object-center' src="https://images.unsplash.com/photo-1618336753974-aae8e04506aa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Picture-2" draggable={false} />
-        <img className='w-[40vmin] h-[56vmin] object-cover object-center' src="https://images.unsplash.com/photo-1682578566205-1dc0d51d978c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=686&q=80" alt="Picture-3" draggable={false} />
-        <img className='w-[40vmin] h-[56vmin] object-cover object-center' src="https://images.unsplash.com/photo-1680504960958-f87a8cdb767a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80" alt="Picture-4" draggable={false} />
-        <img className='w-[40vmin] h-[56vmin] object-cover object-center' src="https://images.unsplash.com/photo-1598040795256-03d22d952f4d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="Picture-5" draggable={false} />
-      </div> */}
-
-
-
-
       <div className='mt-40 flex flex-wrap gap-10'>
-        {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
+        {objectifs.map((objectif, index) => (
+          <ServiceCard key={objectif.title} index={index} {...objectif} />
         ))}
       </div>
     </>
