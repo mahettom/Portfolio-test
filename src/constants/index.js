@@ -3,25 +3,25 @@ import pursuit from '../assets/pursuit.png'
 import sightings from '../assets/sightings.png'
 
 import {
-    mobile,
-    backend,
-    creator,
-    web,
+    // mobile,
+    // backend,
+    // creator,
+    // web,
     javascript,
-    typescript,
+    // typescript,
     html,
     css,
     reactjs,
-    redux,
+    // redux,
     tailwind,
     nodejs,
     mongodb,
     git,
-    figma,
-    docker,
-    starbucks,
-    tesla,
-    shopify,
+    // figma,
+    // docker,
+    // starbucks,
+    // tesla,
+    // shopify,
     threejs,
 } from "../assets";
 
@@ -41,22 +41,22 @@ export const navLinks = [
     },
 ];
 
-const services = [
+const objectifs = [
     {
         title: "Rejoindre un projet inspirant",
-        icon: web,
+        // icon: web,
     },
     {
         title: "Rejoindre une équipe motivante",
-        icon: mobile,
+        // icon: mobile,
     },
     {
         title: "Continuer d'apprendre et découvrir de nouvelles techniques",
-        icon: backend,
+        // icon: backend,
     },
     {
         title: "Puis transmettre ce que je vais apprendre",
-        icon: creator,
+        // icon: creator,
     },
 ];
 
@@ -73,18 +73,18 @@ const technologies = [
         name: "JavaScript",
         icon: javascript,
     },
-    {
-        name: "TypeScript",
-        icon: typescript,
-    },
+    // {
+    //     name: "TypeScript",
+    //     icon: typescript,
+    // },
     {
         name: "React JS",
         icon: reactjs,
     },
-    {
-        name: "Redux Toolkit",
-        icon: redux,
-    },
+    // {
+    //     name: "Redux Toolkit",
+    //     icon: redux,
+    // },
     {
         name: "Tailwind CSS",
         icon: tailwind,
@@ -105,21 +105,21 @@ const technologies = [
         name: "git",
         icon: git,
     },
-    {
-        name: "figma",
-        icon: figma,
-    },
-    {
-        name: "docker",
-        icon: docker,
-    },
+    // {
+    //     name: "figma",
+    //     icon: figma,
+    // },
+    // {
+    //     name: "docker",
+    //     icon: docker,
+    // },
 ];
 
 const experiences = [
     {
         title: "Responsable expédition",
         company_name: "Witroc à Saint-Brieuc",
-        icon: starbucks,
+        // icon: starbucks,
         iconBg: "#383E56",
         date: "Fev 2019 -  Fev 2022",
         points: [
@@ -133,7 +133,7 @@ const experiences = [
     {
         title: "Responsable de magasin",
         company_name: "Witroc à Guingamp",
-        icon: tesla,
+        // icon: tesla,
         iconBg: "#E6DEDD",
         date: "Nov 2017 - Jan 2019",
         points: [
@@ -145,7 +145,7 @@ const experiences = [
     {
         title: "Vendeur",
         company_name: "Wishop",
-        icon: shopify,
+        // icon: shopify,
         iconBg: "#383E56",
         date: "2015 - 2017",
         points: [
@@ -232,4 +232,4 @@ const projects = [
     },
 ];
 
-export { services, technologies, experiences, projects };
+export { objectifs, technologies, experiences, projects };

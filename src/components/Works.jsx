@@ -14,8 +14,6 @@ const ProjectCard = (project) => {
 
   const infoToDisplay = project.info
 
-  console.log(infoToDisplay)
-
   return (
 
     <>
@@ -42,7 +40,7 @@ const ProjectCard = (project) => {
 
         :
 
-        <ul className='text-primary font-ledger text-[16px]'>
+        <ul className='list-disc px-6 text-primary font-ledger text-[16px]'>
           {infoToDisplay.map((info, index) => <li key={index} className='text-primary font-ledger text-[16px]'>{info}</li>)}
         </ul >
 

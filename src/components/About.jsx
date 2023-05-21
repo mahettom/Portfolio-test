@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react'
-import Tilt from 'react-parallax-tilt'
+// import Tilt from 'react-parallax-tilt'
 import { styles } from '../styles'
 import { motion } from 'framer-motion'
-import { services } from '../constants'
+import { objectifs } from '../constants'
 import { SectionWrapper } from '../hoc'
 import { fadeIn, textVariant } from '../utils/motion'
 
@@ -10,27 +10,27 @@ import { fadeIn, textVariant } from '../utils/motion'
 const ServiceCard = ({ index, title, icon }) => {
   return (
 
-    <Tilt className='xs:w-[260px] w-full'>
+    // <Tilt className='xs:w-[260px] w-full'>
 
-      <motion.div
-        variants={fadeIn('right', 'spring', 0.5 * index, 0.75)}
-        className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'>
+    <motion.div
+      variants={fadeIn('right', 'spring', 0.5 * index, 0.75)}
+      className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'>
 
-        <div
-          className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
-          option={{
-            max: 45,
-            scale: 1,
-            speed: 450
-          }}
-        >
-          <img src={icon} alt={title} className='w-16 h-16 object-contain' />
-          <h3 className='text-white text-[20px] font-bold text-center'>{title}</h3>
-        </div>
+      <div
+        className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
+        option={{
+          max: 45,
+          scale: 1,
+          speed: 450
+        }}
+      >
+        <img src={icon} alt={title} className='w-16 h-16 object-contain' />
+        <h3 className='text-white text-[20px] font-bold text-center'>{title}</h3>
+      </div>
 
-      </motion.div>
+    </motion.div>
 
-    </Tilt>
+    // {/* </Tilt> */}
   )
 }
 
@@ -56,8 +56,8 @@ const About = () => {
       </motion.p>
 
       <div className='mt-40 flex flex-wrap gap-10'>
-        {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
+        {objectifs.map((objectif, index) => (
+          <ServiceCard key={objectif.title} index={index} {...objectif} />
         ))}
       </div>
     </>
