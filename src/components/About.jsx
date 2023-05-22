@@ -42,20 +42,23 @@ const About = () => {
 
     <>
 
-      <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} text-primary`}>Introduction</p>
-        <h2 className={`${styles.sectionHeadText} text-primary`}>Overview.</h2>
-      </motion.div>
 
-      <motion.p variants={fadeIn('', '', 0.1, 1)} className='mt-10 text-primary font-ledger text-[16px] max-w-3xl leading-[30px]'>
-        J'ai été formé pour devenir un developpeur fullstack à Ironhack.
-      </motion.p>
 
-      <motion.p variants={fadeIn('', '', 0.1, 1)} className='mt-2 text-primary font-ledger text-[16px] max-w-3xl leading-[30px]'>
-        Et je voudrais maintenant:
-      </motion.p>
+      <div className='bg-gray-100 flex items-center gap-10 h-80 rounded-2xl mt-36 xs:mt-30'>
 
-      <div className='bg-gray-100 flex flex-wrap gap-10 h-80 rounded-2xl mt-36 xs:mt-30'>
+        <div variants={textVariant()} className='flex flex-col w-8/12 items-center p-36'>
+
+          <h2 className={`${styles.sectionHeadText} text-primary font-bold ml-[-100px]`}> Vision </h2>
+
+          <p className='mt-10 text-primary font-ledger text-[16px] leading-8'>
+            J'ai été formé pour devenir un developpeur fullstack à Ironhack.
+            <br /><br />
+            Et je voudrais maintenant:
+          </p>
+
+
+        </div>
+
 
 
 

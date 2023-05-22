@@ -9,9 +9,9 @@ const styles = {
         " text-secondary font-ledger font-medium lg:text-[30px] md:text-[28px] sm:text-[26px] xs:text-[20px] text-[16px]",
 
     sectionHeadText:
-        "font-ledger md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]",
+        "font-ledger md:text-[40px] sm:text-[35px] xs:text-[30px] text-[40px]",
     sectionSubText:
-        "sm:text-[18px] font-ledger text-[14px] uppercase tracking-wider",
+        "font-ledger text-[18px] uppercase tracking-wider",
 };
 
 export { styles };

@@ -12,6 +12,9 @@ module.exports = {
         'black-100': '#100d25',
         'white-100': '#f3f3f3',
       },
+      fontWeight: {
+        bold: '900'
+      },
       boxShadow: {
         card: '0px 35px 120px -15px #211e35',
       },
