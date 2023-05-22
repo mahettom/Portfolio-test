@@ -10,9 +10,9 @@ const App = () => {
 
         <Navbar />
         <Hero />
-        <About />
 
         <div className="bg-white overflow-hidden m-0 w-screen">
+          <About />
           <Experience />
           <Works />
         </div>

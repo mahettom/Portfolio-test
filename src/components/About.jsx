@@ -43,22 +43,29 @@ const About = () => {
     <>
 
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview.</h2>
+        <p className={`${styles.sectionSubText} text-primary`}>Introduction</p>
+        <h2 className={`${styles.sectionHeadText} text-primary`}>Overview.</h2>
       </motion.div>
 
-      <motion.p variants={fadeIn('', '', 0.1, 1)} className='mt-10 text-secondary font-ledger text-[16px] max-w-3xl leading-[30px]'>
+      <motion.p variants={fadeIn('', '', 0.1, 1)} className='mt-10 text-primary font-ledger text-[16px] max-w-3xl leading-[30px]'>
         J'ai été formé pour devenir un developpeur fullstack à Ironhack.
       </motion.p>
 
-      <motion.p variants={fadeIn('', '', 0.1, 1)} className='mt-2 text-secondary font-ledger text-[16px] max-w-3xl leading-[30px]'>
+      <motion.p variants={fadeIn('', '', 0.1, 1)} className='mt-2 text-primary font-ledger text-[16px] max-w-3xl leading-[30px]'>
         Et je voudrais maintenant:
       </motion.p>
 
-      <div className='mt-40 flex flex-wrap gap-10'>
-        {objectifs.map((objectif, index) => (
+      <div className='bg-gray-100 flex flex-wrap gap-10 h-80 rounded-2xl mt-36 xs:mt-30'>
+
+
+
+
+
+        {/* {objectifs.map((objectif, index) => (
           <ServiceCard key={objectif.title} index={index} {...objectif} />
-        ))}
+        ))} */}
+
+
       </div>
     </>
   )
