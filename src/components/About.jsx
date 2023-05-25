@@ -13,7 +13,7 @@ const ServiceCard = ({ index, title, icon }) => {
     <>
 
       <div className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'>
-        <img src={icon} alt={title} className='w-16 h-16 object-contain' />
+        {/* <img src={icon} alt={title} className='w-16 h-16 object-contain' /> */}
         <h3 className='text-white text-[20px] font-bold text-center'>{title}</h3>
       </div>
 
@@ -30,13 +30,9 @@ const About = () => {
   return (
 
     <>
-
-
-
       <div className='bg-gray-100 flex items-center gap-10 h-80 rounded-2xl mt-36 xs:mt-30'>
 
-        <div variants={textVariant()} className='flex flex-col w-8/12 items-center p-36'>
-
+        <div className='flex flex-col w-7/12 items-center p-36'>
           <h2 className={`${styles.sectionHeadText} text-primary font-bold ml-[-100px]`}> Vision </h2>
 
           <p className='mt-10 text-primary font-ledger text-[16px] leading-8'>
@@ -44,21 +40,20 @@ const About = () => {
             <br /><br />
             Et je voudrais maintenant:
           </p>
-
-
         </div>
 
 
+        <div className='flex flex-col items-center gap-7 h-40 w-40'>
 
+          {objectifs.map((objectif, index) => (
+            <ServiceCard key={objectif.title} index={index} {...objectif} />
+          ))}
 
-
-
-        {objectifs.map((objectif, index) => (
-          <ServiceCard key={objectif.title} index={index} {...objectif} />
-        ))}
-
+        </div>
 
       </div>
+
+
     </>
   )
 }
