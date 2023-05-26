@@ -29,10 +29,10 @@ const About = () => {
 
   return (
 
-    <div className='flex items-center h-screen w-screen mt-[-70px] mb-[-70px]'>
-      <div className=' relative overflow-y-scroll flex items-center justify-evenly gap-10 rounded-2xl h-80 bg-gray-100'>
+    <div className=' flex items-center h-screen w-screen mt-[-70px] mb-[-70px]'>
+      <div className=' relative overflow-y-scroll flex items-center justify-evenly gap-10 rounded-2xl h-2/6 bg-gray-100'>
 
-        <div className=' sticky top-10 right-30 flex flex-col w-6/12 items-center pl-24'>
+        <div className=' sticky top-5 right-30 flex flex-col w-6/12 items-center pl-24'>
           <h2 className={`${styles.sectionHeadText} text-primary font-bold ml-[-100px]`}> Vision </h2>
 
           <p className='mt-10 text-primary font-ledger text-[16px] leading-8'>
@@ -42,7 +42,7 @@ const About = () => {
           </p>
         </div>
 
-        <div className='flex flex-col gap-10 rounded-2xl h-80 w-96'>
+        <div className='flex flex-col gap-10 overscroll-contain h-80 w-96'>
 
           {objectifs.map((objectif, index) => (
             <ServiceCard key={objectif.title} index={index} {...objectif} />
