@@ -1,11 +1,11 @@
 import { motion } from "framer-motion"
 import { styles } from "../styles"
-import { ComputersCanvas } from "./canvas"
+import { ComputersCanvas } from "./canvas/Computers"
 
 
 const Hero = () => {
   return (
-    <section className={`relative w-full h-screen mx-auto`}>
+    <section className={`sticky w-full h-screen mx-auto`}>
 
       <div className={`${styles.paddingX} absolute inset-1 top-[120px] max-w-7xl flex xs:flex-col sm:flex-col md:flex-row md:gap-2 lg:flex-row xl:flex-row`}>
 
@@ -13,7 +13,7 @@ const Hero = () => {
         <ComputersCanvas />
 
         <div className="m-3 min-w-[200px]">
-          <h1 className={` ${styles.heroSubText} `}>Hi, i'm <span className="text-tertiary font-ledger">Tom</span></h1>
+          <h1 className={` ${styles.heroSubText} `}>I'm <span className="text-tertiary font-ledger">Tom</span></h1>
           <br />
           <p className={`${styles.heroSubText} `}>MongoDB <br></br> Express.js <br></br> React.js <br></br> Node.js</p>
         </div>
@@ -33,7 +33,7 @@ const Hero = () => {
                 repeat: Infinity,
                 repeatType: 'loop'
               }}
-              className='w-3 h-3 rounded-full bg-secondary mb-1'
+              className='w-3 h-3 rounded-full bg-white mb-1'
             />
           </div>
         </a>
