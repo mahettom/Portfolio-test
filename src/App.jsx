@@ -6,12 +6,12 @@ const App = () => {
   return (
 
     <BrowserRouter>
-      <div className="bg-black overflow-hidden m-0 h-full w-screen">
+      <div className="bg-black overflow-hidden h-full w-screen">
 
         <Navbar />
         <Hero />
 
-        <div className="bg-white overflow-hidden m-0 w-screen">
+        <div className="bg-white overflow-hidden w-screen">
           <About />
           <Experience />
           <Works />
