@@ -17,11 +17,6 @@ import {
     nodejs,
     mongodb,
     git,
-    // figma,
-    // docker,
-    // starbucks,
-    // tesla,
-    // shopify,
     threejs,
 } from "../assets";
 
