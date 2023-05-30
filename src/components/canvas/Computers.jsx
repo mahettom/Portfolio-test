@@ -5,10 +5,8 @@ import Loader from '../Loader'
 import CanvasLoader from '../Loader'
 
 
-
 const Computers = ({ isMobile }) => {
 
-  // const computer = useGLTF('./desktop_pc/scene.gltf')
   const computer = useGLTF('./hero_model/scene.gltf')
 
   return (
@@ -33,21 +31,18 @@ const Computers = ({ isMobile }) => {
 }
 
 
-
 const ComputersCanvas = () => {
 
   const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 500px)")
 
+    const mediaQuery = window.matchMedia("(max-width: 500px)")
     setIsMobile(mediaQuery.matches)
 
     const handleMediaQueryChange = (event) => {
       setIsMobile(event.matches);
     }
-
-
     mediaQuery.addEventListener('change', handleMediaQueryChange)
 
     return () => {
@@ -56,21 +51,18 @@ const ComputersCanvas = () => {
   }, [])
 
 
+
   return (
 
     <Canvas
       frameloop='demand'
       shadows
-      camera={{ position: [20, 3, 5], fov: 25 }}
+      camera={{ position: [0, 15, 100], fov: 5 }}
       gl={{ preserveDrawingBuffer: true }}>
 
       <Suspense fallback={<CanvasLoader />}>
 
-        <OrbitControls
-          enableZoom={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
-        />
+        <OrbitControls enableZoom={false} />
         <Computers isMobile={isMobile} />
 
       </Suspense>
