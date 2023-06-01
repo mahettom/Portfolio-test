@@ -6,16 +6,25 @@ const App = () => {
   return (
 
     <BrowserRouter>
-      <div className="bg-black overflow-hidden h-full w-screen">
+      <div className=" snap-y snap-mandatory overflow-x-hidden bg-black h-screen w-screen">
 
         <Navbar />
-        <Hero />
+        <section className="snap-start">
+          <Hero />
+        </section>
 
-        <div className="bg-white overflow-hidden w-screen">
+        <section className="snap-start bg-white">
           <About />
+        </section>
+
+        <section className="snap-start bg-white">
           <Experience />
+        </section>
+
+        <section className="snap-start bg-white">
           <Works />
-        </div>
+        </section>
+
 
       </div>
     </BrowserRouter>
