@@ -29,28 +29,27 @@ const About = () => {
 
   return (
 
-    <section className='flex items-center h-screen w-screen'>
+    <div className='flex items-start h-[100dvh] w-[100dvw]'>
 
-      <div className='relative flex flex-col justify-center items-center text-center w-10/12 h-96 rounded-2xl bg-gray-100 '>
-        <div className=' w-9/12 '>
-          <h2 className={`${styles.sectionHeadText} text-primary font-bold text-center`}> Vision </h2>
+      <div className='relative flex flex-col justify-center bg-gray-100 text-center w-10/12 h-96 rounded-2xl xs:justify-start xs:h-52 xs:mt-20 oldXs:justify-start oldXs:h-52 oldXs:mt-14'>
 
-          <p className='mt-10 text-primary font-ledger text-[16px] xs:text-[14px] leading-8'>
-            J'ai été formé pour devenir un developpeur fullstack à Ironhack.
-            <br />
-            Et je voudrais maintenant:
-          </p>
+        <h2 className={`${styles.sectionHeadText} text-primary font-bold oldXs:hidden`}> Vision </h2>
 
-        </div>
+        <p className='text-primary font-ledger leading-8 text-[16px] mt-10 xs:text-[14px] oldXs:text-[14px]'>
+          J'ai été formé pour devenir un developpeur fullstack à Ironhack.
+          <br /><br />
+          Et je voudrais maintenant:
+        </p>
+
       </div>
 
-      <div className='absolute overflow-visible top-48 left-80 flex flex-col gap-4 h-96  md:flex-row md:w-full md:top-52 md:left-10 md:overflow-x-auto md:px-56'>
+      <div className='absolute top-96 flex flex-row gap-4 overflow-x-auto z-20 w-full h-96'>
         {objectifs.map((objectif, index) => (
           <ServiceCard key={objectif.title} index={index} {...objectif} />
         ))}
       </div>
 
-    </section>
+    </div>
 
   )
 }
