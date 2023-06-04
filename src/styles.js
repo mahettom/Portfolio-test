@@ -12,6 +12,13 @@ const styles = {
         "font-ledger md:text-[40px] sm:text-[35px] xs:text-[30px] text-[40px]",
     sectionSubText:
         "font-ledger text-[18px] uppercase tracking-wider",
+
+    experienceHeadText:
+        "font-ledger text-tertiary opacity-80 xs:text-xl sm:text-xl md:text-xl md:pt-7 lg:text-xl lg:pt-7",
+    experienceSubText:
+        "font-ledger text-secondary opacity-80 text-xs md:pb-3 lg:pb-3 ",
+    experienceList:
+        "font-ledger text-secondary text-[0.55rem] xs:text-xs sm:text-sm md:text-sm lg:text-sm spaacing-y-2",
 };
 
 export { styles };
