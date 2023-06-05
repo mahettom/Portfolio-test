@@ -34,8 +34,8 @@ const ProjectCard = (project) => {
         ?
 
         <>
-          <div onClick={() => window.open(project.source_code_link, '_blank')} className='border-4'>
-            <img src={project.image} alt={project.name} />
+          <div onClick={() => window.open(project.source_code_link, '_blank')} className='border-8 border-primary'>
+            <img src={project.image} alt={project.name} className=' w-4/5 m-auto' />
           </div>
 
           <p className={`${styles.expWorkList} text-primary`}>{project.description}</p>
@@ -43,7 +43,7 @@ const ProjectCard = (project) => {
 
         :
 
-        <ul className='list-disc px-6 text-primary font-ledger text-[16px]'>
+        <ul className='flex flex-col justify-evenly list-disc px-6 h-80'>
           {infoToDisplay.map((info, index) => <li key={index} className={`${styles.expWorkList} text-[0.65rem] text-primary`}>{info}</li>)}
         </ul >
 
@@ -79,7 +79,7 @@ const Works = () => {
       </motion.div>
 
 
-      <div className='flex flex-col gap-4'>
+      <div className='flex flex-col gap-4 bg-secondary'>
 
         <div className='flex flex-row justify-evenly items-center'>
           {projects.map((project, index) => (
