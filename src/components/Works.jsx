@@ -16,36 +16,39 @@ const ProjectCard = (project) => {
 
   return (
 
-    <>
-      <div className='relative w-full'>
-        <div className='absolute flex justify-end xs:right-2 sm:right-4 md:right-5'>
-          <div onClick={() => window.open(project.source_code_link, '_blank')} className='bg-black w-10 h-10 rounded-full flex justify-center items-center cursor-pointer hover:cursor-pointer'>
-            <img
-              src={github}
-              alt='github'
-              className='w-1/2 h-1/2 object-contain'
-            />
-          </div>
+    <div className='relative flex flex-col justify-evenly items-center h-80 w-full'>
+
+      <div className='absolute bottom-0 right-0 flex justify-end'>
+        <div onClick={() => window.open(project.source_code_link, '_blank')} className='bg-black w-10 h-10 rounded-full flex justify-center items-center cursor-pointer hover:cursor-pointer'>
+          <img
+            src={github}
+            alt='github'
+            className='w-1/2 h-1/2 object-contain'
+          />
         </div>
       </div>
+
 
       {!infoToDisplay
 
         ?
 
-        <div onClick={() => window.open(project.source_code_link, '_blank')}>
-          <p className={`${styles.expWorkList} text-primary`}>{project.description}</p>
-          <img src={project.image} alt={project.name} className='w-1/3 h-full object-cover rounded-2xl m-auto' />
-        </div>
+        <>
+          <div onClick={() => window.open(project.source_code_link, '_blank')} className='border-8 border-primary'>
+            <img src={project.image} alt={project.name} className=' w-4/5 m-auto' />
+          </div>
+
+          <p className={`${styles.expWorkList} text-primary h-1/3`}>{project.description}</p>
+        </>
 
         :
 
-        <ul className='list-disc px-6 text-primary font-ledger text-[16px]'>
+        <ul className='flex flex-col justify-evenly list-disc px-6 h-80'>
           {infoToDisplay.map((info, index) => <li key={index} className={`${styles.expWorkList} text-[0.65rem] text-primary`}>{info}</li>)}
         </ul >
 
       }
-    </>
+    </div>
   )
 }
 
@@ -76,7 +79,7 @@ const Works = () => {
       </motion.div>
 
 
-      <div className='flex flex-col gap-4'>
+      <div className='flex flex-col gap-4 bg-secondary'>
 
         <div className='flex flex-row justify-evenly items-center'>
           {projects.map((project, index) => (
@@ -84,9 +87,9 @@ const Works = () => {
           ))}
         </div>
 
-        <div className='flex flex-col h-80'>
-          <ProjectCard {...actualProject} info={infoToDisplay} />
-        </div>
+
+        <ProjectCard {...actualProject} info={infoToDisplay} />
+
 
         <div className='flex flex-row justify-evenly'>
           <button onClick={() => setInfoToDisplay(requirement)} className={`${styles.expWorkSubText} text-primary border-4 shadow-inner border-double p-2`}>Requirement</button>
