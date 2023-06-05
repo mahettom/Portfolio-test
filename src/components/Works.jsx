@@ -57,9 +57,7 @@ const Works = () => {
   const [requirement, setRequirement] = useState(actualProject.requirement)
   const [improvement, setImprovement] = useState(actualProject.improvement)
   const [challenge, setChallenge] = useState(actualProject.challenge)
-
   const [infoToDisplay, setInfoToDisplay] = useState(null)
-
 
   useEffect(() => {
 
@@ -69,7 +67,6 @@ const Works = () => {
     setImprovement(actualProject.improvement)
 
   }, [actualProject])
-
 
 
   return (
