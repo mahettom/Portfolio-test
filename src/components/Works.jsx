@@ -16,26 +16,26 @@ const ProjectCard = (project) => {
 
   return (
 
-    <>
-      <div className='relative w-full'>
-        <div className='absolute flex justify-end xs:right-2 sm:right-4 md:right-5'>
-          <div onClick={() => window.open(project.source_code_link, '_blank')} className='bg-black w-10 h-10 rounded-full flex justify-center items-center cursor-pointer hover:cursor-pointer'>
-            <img
-              src={github}
-              alt='github'
-              className='w-1/2 h-1/2 object-contain'
-            />
-          </div>
+    <div className='relative flex flex-col h-80 w-full'>
+
+      <div className='absolute flex justify-end xs:right-2 sm:right-4 md:right-5'>
+        <div onClick={() => window.open(project.source_code_link, '_blank')} className='bg-black w-10 h-10 rounded-full flex justify-center items-center cursor-pointer hover:cursor-pointer'>
+          <img
+            src={github}
+            alt='github'
+            className='w-1/2 h-1/2 object-contain'
+          />
         </div>
       </div>
+
 
       {!infoToDisplay
 
         ?
 
         <div onClick={() => window.open(project.source_code_link, '_blank')}>
-          <p className={`${styles.expWorkList} text-primary`}>{project.description}</p>
           <img src={project.image} alt={project.name} className='w-1/3 h-full object-cover rounded-2xl m-auto' />
+          <p className={`${styles.expWorkList} text-primary`}>{project.description}</p>
         </div>
 
         :
@@ -45,7 +45,7 @@ const ProjectCard = (project) => {
         </ul >
 
       }
-    </>
+    </div>
   )
 }
 
@@ -84,9 +84,9 @@ const Works = () => {
           ))}
         </div>
 
-        <div className='flex flex-col h-80'>
-          <ProjectCard {...actualProject} info={infoToDisplay} />
-        </div>
+
+        <ProjectCard {...actualProject} info={infoToDisplay} />
+
 
         <div className='flex flex-row justify-evenly'>
           <button onClick={() => setInfoToDisplay(requirement)} className={`${styles.expWorkSubText} text-primary border-4 shadow-inner border-double p-2`}>Requirement</button>
