@@ -16,9 +16,9 @@ const ProjectCard = (project) => {
 
   return (
 
-    <div className='relative flex flex-col h-80 w-full'>
+    <div className='relative flex flex-col items-center h-80 w-full'>
 
-      <div className='absolute flex justify-end xs:right-2 sm:right-4 md:right-5'>
+      <div className='absolute top-0 right-0 flex justify-end xs:right-2 sm:right-4 md:right-5'>
         <div onClick={() => window.open(project.source_code_link, '_blank')} className='bg-black w-10 h-10 rounded-full flex justify-center items-center cursor-pointer hover:cursor-pointer'>
           <img
             src={github}
@@ -33,10 +33,13 @@ const ProjectCard = (project) => {
 
         ?
 
-        <div onClick={() => window.open(project.source_code_link, '_blank')}>
-          <img src={project.image} alt={project.name} className='w-1/3 h-full object-cover rounded-2xl m-auto' />
+        <>
+          <div onClick={() => window.open(project.source_code_link, '_blank')} className='border-4'>
+            <img src={project.image} alt={project.name} />
+          </div>
+
           <p className={`${styles.expWorkList} text-primary`}>{project.description}</p>
-        </div>
+        </>
 
         :
 
