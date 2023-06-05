@@ -19,7 +19,7 @@ const ProjectCard = (project) => {
     <>
       <div className='relative w-full'>
         <div className='absolute flex justify-end xs:right-2 sm:right-4 md:right-5'>
-          <div onClick={() => window.open(project.source_code_link, '_blank')} className='bg-black w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'>
+          <div onClick={() => window.open(project.source_code_link, '_blank')} className='bg-black w-10 h-10 rounded-full flex justify-center items-center cursor-pointer hover:cursor-pointer'>
             <img
               src={github}
               alt='github'
@@ -33,7 +33,7 @@ const ProjectCard = (project) => {
 
         ?
 
-        <div>
+        <div onClick={() => window.open(project.source_code_link, '_blank')}>
           <p className={`${styles.expWorkList} text-primary`}>{project.description}</p>
           <img src={project.image} alt={project.name} className='w-1/3 h-full object-cover rounded-2xl m-auto' />
         </div>
@@ -80,7 +80,7 @@ const Works = () => {
 
         <div className='flex flex-row justify-evenly items-center'>
           {projects.map((project, index) => (
-            <button onClick={() => setActualProject(project)} className='font-ledger text-primary w-56 p-5 border-4 rounded-md shadow-inner' key={`project-${index}`}>{project.name}</button>
+            <button onClick={() => setActualProject(project)} className={`${styles.expWorkSubText} text-primary border-4 shadow-inner border-double p-2`} key={`project-${index}`}>{project.name}</button>
           ))}
         </div>
 
@@ -89,9 +89,9 @@ const Works = () => {
         </div>
 
         <div className='flex flex-row justify-evenly'>
-          <button onClick={() => setInfoToDisplay(requirement)} className='font-ledger text-primary p-5 border-4 rounded-md shadow-inner'>Requirement</button>
-          <button onClick={() => setInfoToDisplay(challenge)} className='font-ledger text-primary p-5 border-4 rounded-md shadow-inner'>Challenge</button>
-          <button onClick={() => setInfoToDisplay(improvement)} className='font-ledger text-primary p-5 border-4 rounded-md shadow-inner'>Improvement</button>
+          <button onClick={() => setInfoToDisplay(requirement)} className={`${styles.expWorkSubText} text-primary border-4 shadow-inner border-double p-2`}>Requirement</button>
+          <button onClick={() => setInfoToDisplay(challenge)} className={`${styles.expWorkSubText} text-primary border-4 shadow-inner border-double p-2`}> Challenge</button>
+          <button onClick={() => setInfoToDisplay(improvement)} className={`${styles.expWorkSubText} text-primary border-4 shadow-inner border-double p-2`}> Improvement</button>
         </div>
 
       </div>

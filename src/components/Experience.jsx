@@ -13,7 +13,7 @@ const ExperienceCard = ({ experience }) => (
       <h3 className={`${styles.expWorkHeadText}`}>
         {experience.title}
       </h3>
-      <p className={`${styles.expWorkSubText}`}>
+      <p className={`${styles.expWorkSubText} text-secondary  opacity-80 md:pb-3 lg:pb-3`}>
         {experience.company_name}
       </p>
 
