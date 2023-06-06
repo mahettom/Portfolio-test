@@ -16,7 +16,7 @@ const styles = {
     expWorkHeadText:
         "font-ledger text-tertiary opacity-80 xs:text-xl sm:text-xl md:text-xl md:pt-7 lg:text-xl lg:pt-7",
     expWorkSubText:
-        "font-ledger text-sm ",
+        "font-ledger text-xs xs:text-sm sm:text-sm md-text-base lg:text-base",
     expWorkList:
         "font-ledger text-[0.65rem] xs:text-xs sm:text-sm md:text-sm lg:text-sm spaacing-y-2",
 };
