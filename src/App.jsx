@@ -21,7 +21,7 @@ const App = () => {
           <Experience />
         </section>
 
-        <section className="snap-start h-[100dvh] w-[100dvw] bg-secondary">
+        <section className="snap-start h-[100dvh] w-[100dvw] bg-secondary ">
           <Works />
         </section>
 
