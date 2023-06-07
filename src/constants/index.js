@@ -119,9 +119,9 @@ const experiences = [
         date: "Fev 2019 -  Fev 2022",
         points: [
             "Lancement d'un projet de vente en live sur facebook",
-            "Assistance technique occasionnel sur OBS streaming",
-            "Mise en place des modules Stripe & Sendcloud",
-            "Management de mission intérim",
+            "Assistance technique occasionnelle sur OBS streaming",
+            "Gestion d'environs 300 colis par semaine et SAV",
+            "Management de missions intérim",
             "Gestion des réclamations"
         ],
     },
@@ -134,7 +134,8 @@ const experiences = [
         points: [
             "Ouverture d'un magasin pilote en micro-entrepreneur",
             "Communication hebdomadaire sur les réseaux sociaux",
-            "Analyse du chiffre d'affaire et fixation d'objectifs",
+            "Analyse du chiffre d'affaire pour la future franchisée",
+            "Accompagnement au lancement du premier magasin franchisé"
         ],
     },
     {

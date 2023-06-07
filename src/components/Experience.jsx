@@ -7,7 +7,7 @@ import { styles } from "../styles"
 
 const ExperienceCard = ({ experience }) => (
 
-  <div className="first:rounded-tl-2xl last:rounded-bl-2xl bg-primary border-primary border-e-tertiary border-8 md:first:rounded-bl-2xl md:last:rounded-br-2xl md:border-primary md:border-t-tertiary md:first:rounded-tl-none md:last:rounded-bl-none lg:first:rounded-bl-2xl lg:last:rounded-br-2xl lg:border-primary lg:border-t-tertiary lg:first:rounded-tl-none lg:last:rounded-bl-none">
+  <div className="md:h-96 lg:h-96 first:rounded-tl-2xl last:rounded-bl-2xl bg-primary border-primary border-e-tertiary border-8 md:first:rounded-bl-2xl md:last:rounded-br-2xl md:border-primary md:border-t-tertiary md:first:rounded-tl-none md:last:rounded-bl-none lg:first:rounded-bl-2xl lg:last:rounded-br-2xl lg:border-primary lg:border-t-tertiary lg:first:rounded-tl-none lg:last:rounded-bl-none">
     <div className="px-2">
 
       <h3 className={`${styles.expWorkHeadText}`}>
@@ -20,7 +20,7 @@ const ExperienceCard = ({ experience }) => (
     </div>
 
     <div>
-      <ul className='list-disc py-3.5 ml-5 space-y-3'>
+      <ul className='list-disc py-3.5 ml-5 space-y-3 md:space-y-8 '>
 
         {experience.points.map((point, index) => (
           <li key={`experience-points-${index}`} className={`${styles.expWorkList} text-secondary text-[0.54rem]`}>
@@ -40,7 +40,7 @@ const Experience = () => {
   return (
     <>
 
-      <motion.div variants={textVariant()} className=" mb-4 sm:mt-10 sm:mb-16 md:mt-1 lg:mt-1">
+      <motion.div variants={textVariant()} className=" mb-4 sm:mt-10 sm:mb-16 md:mb-40 md:mt-10 lg:mt-10">
         <h2 className={`${styles.sectionHeadText} text-primary`}>Work Experience</h2>
       </motion.div>
 

@@ -18,7 +18,7 @@ const styles = {
     expWorkSubText:
         "font-ledger text-xs xs:text-sm sm:text-sm md-text-base lg:text-base",
     expWorkList:
-        "font-ledger text-[0.65rem] xs:text-xs sm:text-sm md:text-sm lg:text-sm spaacing-y-2",
+        "font-ledger text-[0.65rem] xs:text-xs sm:text-sm md:text-sm lg:text-sm spacing-y-2",
 };
 
 export { styles };
