@@ -6,22 +6,22 @@ const App = () => {
   return (
 
     <BrowserRouter>
-      <div className=" snap-y snap-mandatory overflow-x-hidden bg-primary h-screen w-screen">
+      <div className=" snap-y snap-mandatory overflow-x-hidden bg-secondary h-screen w-screen">
 
         <Navbar />
-        <section className="snap-start h-[100dvh] w-[100dvw]">
+        <section className="snap-start h-[100dvh] w-[100dvw] relative bg-primary">
           <Hero />
         </section>
 
-        <section className="snap-start h-[100dvh] w-[100dvw] bg-secondary">
+        <section className="snap-start h-[100dvh] w-[100dvw]">
           <About />
         </section>
 
-        <section className="snap-start h-[100dvh] w-[100dvw] bg-secondary">
+        <section className="snap-start h-[120dvh] w-[100dvw]">
           <Experience />
         </section>
 
-        <section className="snap-start h-[100dvh] w-[100dvw] bg-secondary ">
+        <section className="snap-start h-[100dvh] w-[100dvw]">
           <Works />
         </section>
 

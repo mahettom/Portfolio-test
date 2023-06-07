@@ -1,11 +1,10 @@
-import { motion } from "framer-motion"
 import { styles } from "../styles"
 import { ComputersCanvas } from "./canvas/Computers"
 
 
 const Hero = () => {
   return (
-    <section className={`sticky w-full h-screen mx-auto`}>
+    <section className={` h-[100dvh] w-[100dvh]`}>
 
       <div className={`${styles.paddingX} absolute inset-0 w-screen flex flex-row md:gap-2`}>
 
