@@ -1,13 +1,11 @@
-import { useRef, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 
 import { fadeIn, textVariant } from '../utils/motion'
-import { projects } from '../constants/index'
 import { SectionWrapper } from '../hoc'
+import { projects } from '../constants/index'
 import { styles } from '../styles'
 import { github } from '../assets'
-
-
 
 
 const ProjectCard = (project) => {
@@ -28,23 +26,24 @@ const ProjectCard = (project) => {
         </div>
       </div>
 
-
-      {!infoToDisplay
-
-        ?
-
+      {!infoToDisplay ?
         <>
           <div onClick={() => window.open(project.source_code_link, '_blank')} className='ring-4 ring-tertiary ring-offset-8 ring-offset-amber-700 rounded'>
             <img src={project.image} alt={project.name} className=' w-4/5 m-auto my-3' />
           </div>
 
-          <p className={`${project.id === 'Project 1' ? 'text-primary' : 'text-secondary'} ${styles.expWorkList} h-1/3 my-auto mx-auto p-2`}>{project.description}</p>
+          <p className={`${project.id === 'Project 1' ? 'text-primary' : 'text-secondary'} ${styles.expWorkList} h-1/3 my-auto mx-auto p-2`}>
+            {project.description}
+          </p>
         </>
 
         :
 
         <ul className='flex flex-col justify-center list-disc px-6 h-80'>
-          {infoToDisplay.map((info, index) => <li key={index} className={`${project.id === 'Project 1' ? 'text-primary' : 'text-secondary'} ${styles.expWorkList} text-[0.65rem] my-auto text-primary`}>{info}</li>)}
+          {infoToDisplay.map((info, index) =>
+            <li key={index} className={`${project.id === 'Project 1' ? 'text-primary' : 'text-secondary'} ${styles.expWorkList} text-[0.65rem] my-auto text-primary`}>
+              {info}
+            </li>)}
         </ul >
 
       }
@@ -78,25 +77,22 @@ const Works = () => {
         <h2 className={`${styles.sectionHeadText} text-primary`}>Project.</h2>
       </motion.div>
 
-
       <div className='flex flex-col md:flex-row gap-10 bg-secondary'>
-
         <div className='flex flex-row justify-between md:flex-col md:justify-evenly'>
           {projects.map((project, index) => (
-            <button onClick={() => setActualProject(project)} className={`${styles.expWorkSubText} bg-tertiary text-secondary ring-2 ring-tertiary rounded-sm ring-offset-4 ring-offset-orange-700 p-1`} key={`project-${index}`}>{project.name}</button>
+            <button onClick={() => setActualProject(project)} className={`${styles.expWorkSubText} bg-tertiary text-secondary ring-2 ring-tertiary rounded-sm ring-offset-4 ring-offset-orange-700 p-1`} key={`project-${index}`}>
+              {project.name}
+            </button>
           ))}
         </div>
 
-
         <ProjectCard {...actualProject} info={infoToDisplay} />
-
 
         <div className='flex flex-row justify-between md:flex-col md:justify-evenly'>
           <button onClick={() => setInfoToDisplay(requirement)} className={`${styles.expWorkSubText} bg-tertiary text-secondary ring-2 ring-tertiary rounded-sm ring-offset-4 ring-offset-orange-700 p-1`}>Requirement</button>
           <button onClick={() => setInfoToDisplay(challenge)} className={`${styles.expWorkSubText}  bg-tertiary text-secondary ring-2 ring-tertiary rounded-sm ring-offset-4 ring-offset-orange-700 p-1`}> Challenge</button>
           <button onClick={() => setInfoToDisplay(improvement)} className={`${styles.expWorkSubText}  bg-tertiary text-secondary ring-2 ring-tertiary rounded-sm ring-offset-4 ring-offset-orange-700 p-1`}> Improvement</button>
         </div>
-
       </div>
     </>
   )
