@@ -73,8 +73,8 @@ const Works = () => {
 
 
   return (
-    <>
-      <motion.div variants={textVariant()} className=' my-10'>
+    <div className='flex flex-col justify-center items-center'>
+      <motion.div variants={textVariant()} className=' my-7 xs:m-16'>
         <h2 className={`${styles.sectionHeadText} text-primary`}>Project.</h2>
       </motion.div>
 
@@ -98,7 +98,7 @@ const Works = () => {
         </div>
 
       </div>
-    </>
+    </div>
   )
 }
 

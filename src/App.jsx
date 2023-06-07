@@ -17,7 +17,7 @@ const App = () => {
           <About />
         </section>
 
-        <section className="snap-start h-[100dvh] w-[100dvw]">
+        <section className="snap-start h-[120dvh] w-[100dvw]">
           <Experience />
         </section>
 
