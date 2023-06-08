@@ -21,27 +21,29 @@ const About = () => {
 
   return (
     <>
-      <div className='relative flex flex-col mx-auto h-60 w-10/12 p-2 mt-2 rounded-2xl bg-gray-100 md:mt-10 lg:mt-10'>
+      <div className='relative flex flex-col mx-auto h-60 w-10/12 p-2 mt-24 rounded-2xl bg-gray-100 md:mt-10 lg:mt-10'>
 
-        <h2 className={`${styles.sectionHeadText} text-primary m-4 font-bold oldXs:text-xl xs:text-xl sm:text-xl lg:m-7 md:m-7`}> Objectif </h2>
+        <h2 className={`${styles.sectionHeadText} text-primary m-4 font-bold oldXs:text-xl xs:text-xl sm:text-xl lg:m-7 md:m-7`}>
+          My Goals
+        </h2>
 
-        <p className='text-primary font-ledger leading-8 text-[16px] mt-4 xs:text-[14px] oldXs:text-[14px]'>
-          J'ai été formé pour devenir un developpeur fullstack à Ironhack.
+        <p className='text-primary font-ledger leading-8 text-[16px] mt-4 ml-2 xs:text-[14px] oldXs:text-[14px]'>
+          I was trained to become a fullstack developer at Ironhack.
           <br /><br />
-          Et je voudrais maintenant:
+          And I would like now:
         </p>
 
       </div>
 
-      <div className='absolute top-80 left-14 flex flex-row gap-4 overflow-x-auto w-full md:top-96 md:left-32 lg:top-96 lg:left-36 '>
+      <div className='absolute top-[500px] left-10 flex flex-row gap-4 overflow-x-auto w-full md:top-96 md:left-32 lg:top-96 lg:left-36 '>
         {objectifs.map((objectif, index) => (
           <ServiceCard key={objectif.title} index={index} {...objectif} />
         ))}
       </div>
 
-      {/* SWIPE INDICE ———————*/}
+      {/* SWIPE ANIMATION ———————*/}
 
-      <div className="md:hidden lg:hidden xl:hidden absolute bottom-[-10rem] xs:right-8 sm:right-16 w-full flex justify-center items-center">
+      <div className="md:hidden lg:hidden xl:hidden absolute bottom-[-2rem] xs:right-8 sm:right-16 w-full flex justify-center items-center">
         <div className="w-[64px] h-[35px] rounded-3xl border-4 border-gray-300 flex justify-start items-center p-2 ">
           <motion.div
             animate={{

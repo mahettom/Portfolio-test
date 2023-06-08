@@ -14,7 +14,7 @@ const ProjectCard = (project) => {
 
   return (
 
-    <div className={`${project.id === 'Project 1' ? 'bg-secondary' : 'bg-primary'} relative flex flex-col gap-5 h-2/3 sm:h-4/5 md:min-h-[453px] md:min-w-[932px] lg:min-h-[507px] lg:min-w-[1104px] ring-4 ring-tertiary ring-offset-8 ring-offset-amber-700 rounded`}>
+    <div className={`${project.id === 'Project 1' ? 'bg-secondary' : 'bg-primary'} relative flex flex-col h-2/3 sm:h-4/5 md:min-h-[453px] md:min-w-[670px] lg:min-h-[507px] lg:min-w-[720px] ring-4 ring-tertiary ring-offset-8 ring-offset-amber-700 rounded`}>
 
       <div className='absolute top-2 right-2'>
         <div onClick={() => window.open(project.source_code_link, '_blank')} className='bg-black w-10 h-10 rounded-full flex justify-center items-center cursor-pointer hover:cursor-pointer'>
@@ -32,8 +32,15 @@ const ProjectCard = (project) => {
             <img src={project.image} alt={project.name} className=' w-4/5 m-auto my-3' />
           </div>
 
-          <p className={`${project.id === 'Project 1' ? 'text-primary' : 'text-secondary'} ${styles.expWorkList} h-1/3 my-auto mx-auto p-2`}>
+          <p className={`${project.id === 'Project 1' ? 'text-primary' : 'text-secondary'} ${styles.expWorkList} text-center h-1/3 p-4`}>
             {project.description}
+          </p>
+          <p className='flex justify-around'>
+            {project.tags.map((tag, index) =>
+              <span className={`${tag.color} text-lg font-semibold`} >
+                {tag.name}
+              </span>
+            )}
           </p>
         </>
 
@@ -73,7 +80,7 @@ const Works = () => {
 
   return (
     <>
-      <motion.div variants={textVariant()} className=' my-7 xs:mb-16 md:my-10'>
+      <motion.div variants={textVariant()} className='mt-5 mb-16 sm:mb-5 md:mb-20 lg:mb-10'>
         <h2 className={`${styles.sectionHeadText} text-primary`}>Project.</h2>
       </motion.div>
 

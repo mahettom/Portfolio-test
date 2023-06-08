@@ -3,16 +3,10 @@ import pursuit from '../assets/pursuit.png'
 import sightings from '../assets/sightings.png'
 
 import {
-    // mobile,
-    // backend,
-    // creator,
-    // web,
     javascript,
-    // typescript,
     html,
     css,
     reactjs,
-    // redux,
     tailwind,
     nodejs,
     mongodb,
@@ -38,22 +32,19 @@ export const navLinks = [
 
 const objectifs = [
     {
-        title: "Rejoindre un projet inspirant",
-        // icon: web,
+        title: "Join an inspiring project",
     },
     {
-        title: "Rejoindre une équipe motivante",
-        // icon: mobile,
+        title: "Work in a team",
     },
     {
-        title: "Continuer d'apprendre et découvrir de nouvelles techniques",
-        // icon: backend,
+        title: "Keep learning & discovering new techniques",
     },
     {
-        title: "Puis transmettre ce que je vais apprendre",
-        // icon: creator,
+        title: "Then pass on what I have learn",
     },
 ];
+
 
 const technologies = [
     {
@@ -68,18 +59,10 @@ const technologies = [
         name: "JavaScript",
         icon: javascript,
     },
-    // {
-    //     name: "TypeScript",
-    //     icon: typescript,
-    // },
     {
         name: "React JS",
         icon: reactjs,
     },
-    // {
-    //     name: "Redux Toolkit",
-    //     icon: redux,
-    // },
     {
         name: "Tailwind CSS",
         icon: tailwind,
@@ -100,53 +83,39 @@ const technologies = [
         name: "git",
         icon: git,
     },
-    // {
-    //     name: "figma",
-    //     icon: figma,
-    // },
-    // {
-    //     name: "docker",
-    //     icon: docker,
-    // },
 ];
 
 const experiences = [
     {
-        title: "Responsable expédition",
-        company_name: "Witroc à Saint-Brieuc",
-        // icon: starbucks,
-        iconBg: "#383E56",
+        title: "Shipping Manager",
+        company_name: "Witroc at Saint-Brieuc",
         date: "Fev 2019 -  Fev 2022",
         points: [
-            "Lancement d'un projet de vente en live sur facebook",
-            "Assistance technique occasionnelle sur OBS streaming",
-            "Gestion d'environs 300 colis par semaine et SAV",
-            "Management de missions intérim",
-            "Gestion des réclamations"
+            "Launch of a live sales project on facebook",
+            "Occasional technical support on OBS streaming",
+            "Sends around 250 packages per week + after-sales service",
+            "Management of interim assignments",
+            "Claims management"
         ],
     },
     {
-        title: "Responsable de magasin",
-        company_name: "Witroc à Guingamp",
-        // icon: tesla,
-        iconBg: "#E6DEDD",
+        title: "Store manager",
+        company_name: "Witroc at Guingamp",
         date: "Nov 2017 - Jan 2019",
         points: [
-            "Ouverture d'un magasin pilote en micro-entrepreneur",
-            "Communication hebdomadaire sur les réseaux sociaux",
-            "Analyse du chiffre d'affaire pour la future franchisée",
-            "Accompagnement au lancement du premier magasin franchisé"
+            "Opening of a pilot store as a micro-entrepreneur status",
+            "Weekly communication on social networks",
+            "Analysis of turnover for the future franchisee",
+            "Support for the launch of the first franchise store"
         ],
     },
     {
         title: "Vendeur",
         company_name: "Wishop",
-        // icon: shopify,
-        iconBg: "#383E56",
         date: "2015 - 2017",
         points: [
-            "En alternance la première année",
-            "Puis en tant que vendeur la deuxième année",
+            "Cooperative training course the first year",
+            "Then as a seller the second year",
         ],
     },
 ];
@@ -156,7 +125,7 @@ const projects = [
         name: "Pixel Pursuit",
         id: "Project 1",
         week: "Week 3",
-        description: "Catch the points without collide with a ennemy",
+        description: "Catch the points without collide with a ennemy. Ennemy will spawn at the top, be careful the closer you are from 20 points the faster they will go.",
         requirement: ["For the first project, we were asked to render a game in the browser.", "He should have logic for winning and/or losing.", "Show feedback to the player in either case."],
         challenge: ["I had to start all over again on Wednesday except for the grid, because I keep thinking about new features and it got too complicated.", "Time management, didn't have time to style the game!", "Keeping track of all the class and their relationships together.", "For this project I was not use to read and understand errors in the console, but it trained me.", "Keep the code clean with a lot of classes."],
         improvement: ["The overall style", "Make more comment for describe each step.", "Create some difficulty levels (more easy for beggining and improve after)."],
@@ -165,15 +134,15 @@ const projects = [
         tags: [
             {
                 name: "HTML",
-                color: "green-text-gradient",
+                color: "text-tertiary",
             },
             {
                 name: "CSS",
-                color: "blue-text-gradient",
+                color: "text-tertiary",
             },
             {
                 name: "javascript",
-                color: "pink-text-gradient",
+                color: "text-tertiary",
             },
         ],
     },
@@ -190,15 +159,15 @@ const projects = [
         tags: [
             {
                 name: "react",
-                color: "blue-text-gradient",
+                color: "text-tertiary",
             },
             {
                 name: "restapi",
-                color: "green-text-gradient",
+                color: "text-tertiary",
             },
             {
                 name: "scss",
-                color: "pink-text-gradient",
+                color: "text-tertiary",
             },
         ],
     },
