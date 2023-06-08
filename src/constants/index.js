@@ -3,16 +3,10 @@ import pursuit from '../assets/pursuit.png'
 import sightings from '../assets/sightings.png'
 
 import {
-    // mobile,
-    // backend,
-    // creator,
-    // web,
     javascript,
-    // typescript,
     html,
     css,
     reactjs,
-    // redux,
     tailwind,
     nodejs,
     mongodb,
@@ -38,22 +32,19 @@ export const navLinks = [
 
 const objectifs = [
     {
-        title: "Rejoindre un projet inspirant",
-        // icon: web,
+        title: "Join an inspiring project",
     },
     {
-        title: "Rejoindre une équipe motivante",
-        // icon: mobile,
+        title: "Work in a team",
     },
     {
-        title: "Continuer d'apprendre et découvrir de nouvelles techniques",
-        // icon: backend,
+        title: "Keep learning & discovering new techniques",
     },
     {
-        title: "Puis transmettre ce que je vais apprendre",
-        // icon: creator,
+        title: "Then pass on what I have learn",
     },
 ];
+
 
 const technologies = [
     {
@@ -68,18 +59,10 @@ const technologies = [
         name: "JavaScript",
         icon: javascript,
     },
-    // {
-    //     name: "TypeScript",
-    //     icon: typescript,
-    // },
     {
         name: "React JS",
         icon: reactjs,
     },
-    // {
-    //     name: "Redux Toolkit",
-    //     icon: redux,
-    // },
     {
         name: "Tailwind CSS",
         icon: tailwind,
@@ -100,21 +83,12 @@ const technologies = [
         name: "git",
         icon: git,
     },
-    // {
-    //     name: "figma",
-    //     icon: figma,
-    // },
-    // {
-    //     name: "docker",
-    //     icon: docker,
-    // },
 ];
 
 const experiences = [
     {
         title: "Responsable expédition",
         company_name: "Witroc à Saint-Brieuc",
-        // icon: starbucks,
         iconBg: "#383E56",
         date: "Fev 2019 -  Fev 2022",
         points: [
@@ -128,7 +102,6 @@ const experiences = [
     {
         title: "Responsable de magasin",
         company_name: "Witroc à Guingamp",
-        // icon: tesla,
         iconBg: "#E6DEDD",
         date: "Nov 2017 - Jan 2019",
         points: [
@@ -141,7 +114,6 @@ const experiences = [
     {
         title: "Vendeur",
         company_name: "Wishop",
-        // icon: shopify,
         iconBg: "#383E56",
         date: "2015 - 2017",
         points: [
