@@ -87,38 +87,35 @@ const technologies = [
 
 const experiences = [
     {
-        title: "Responsable expédition",
-        company_name: "Witroc à Saint-Brieuc",
-        iconBg: "#383E56",
+        title: "Shipping Manager",
+        company_name: "Witroc at Saint-Brieuc",
         date: "Fev 2019 -  Fev 2022",
         points: [
-            "Lancement d'un projet de vente en live sur facebook",
-            "Assistance technique occasionnelle sur OBS streaming",
-            "Gestion d'environs 300 colis par semaine et SAV",
-            "Management de missions intérim",
-            "Gestion des réclamations"
+            "Launch of a live sales project on facebook",
+            "Occasional technical support on OBS streaming",
+            "Sends around 250 packages per week + after-sales service",
+            "Management of interim assignments",
+            "Claims management"
         ],
     },
     {
-        title: "Responsable de magasin",
-        company_name: "Witroc à Guingamp",
-        iconBg: "#E6DEDD",
+        title: "Store manager",
+        company_name: "Witroc at Guingamp",
         date: "Nov 2017 - Jan 2019",
         points: [
-            "Ouverture d'un magasin pilote en micro-entrepreneur",
-            "Communication hebdomadaire sur les réseaux sociaux",
-            "Analyse du chiffre d'affaire pour la future franchisée",
-            "Accompagnement au lancement du premier magasin franchisé"
+            "Opening of a pilot store as a micro-entrepreneur status",
+            "Weekly communication on social networks",
+            "Analysis of turnover for the future franchisee",
+            "Support for the launch of the first franchise store"
         ],
     },
     {
         title: "Vendeur",
         company_name: "Wishop",
-        iconBg: "#383E56",
         date: "2015 - 2017",
         points: [
-            "En alternance la première année",
-            "Puis en tant que vendeur la deuxième année",
+            "Cooperative training course the first year",
+            "Then as a seller the second year",
         ],
     },
 ];
