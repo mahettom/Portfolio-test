@@ -125,7 +125,7 @@ const projects = [
         name: "Pixel Pursuit",
         id: "Project 1",
         week: "Week 3",
-        description: "Catch the points without collide with a ennemy",
+        description: "Catch the points without collide with a ennemy. Ennemy will spawn at the top, be careful the closer you are from 20 points the faster they will go.",
         requirement: ["For the first project, we were asked to render a game in the browser.", "He should have logic for winning and/or losing.", "Show feedback to the player in either case."],
         challenge: ["I had to start all over again on Wednesday except for the grid, because I keep thinking about new features and it got too complicated.", "Time management, didn't have time to style the game!", "Keeping track of all the class and their relationships together.", "For this project I was not use to read and understand errors in the console, but it trained me.", "Keep the code clean with a lot of classes."],
         improvement: ["The overall style", "Make more comment for describe each step.", "Create some difficulty levels (more easy for beggining and improve after)."],
@@ -134,15 +134,15 @@ const projects = [
         tags: [
             {
                 name: "HTML",
-                color: "green-text-gradient",
+                color: "text-tertiary",
             },
             {
                 name: "CSS",
-                color: "blue-text-gradient",
+                color: "text-tertiary",
             },
             {
                 name: "javascript",
-                color: "pink-text-gradient",
+                color: "text-tertiary",
             },
         ],
     },
@@ -159,15 +159,15 @@ const projects = [
         tags: [
             {
                 name: "react",
-                color: "blue-text-gradient",
+                color: "text-tertiary",
             },
             {
                 name: "restapi",
-                color: "green-text-gradient",
+                color: "text-tertiary",
             },
             {
                 name: "scss",
-                color: "pink-text-gradient",
+                color: "text-tertiary",
             },
         ],
     },
