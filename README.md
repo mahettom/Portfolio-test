@@ -1,4 +1,4 @@
-# Three.js-Training
+# Portfolio
 
 Tech : `React Tailwind Three.js` 
 
