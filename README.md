@@ -1,10 +1,10 @@
 # Three.js-Training
 
-Tech : **React Tailwind Three.js** 
+Tech : `React Tailwind Three.js` 
 
 ## Description
 
-> I choose to do a portfolio after Ironhack for keep experimenting react and discover new techniques like Tailwind and three.js
+ I choose to do a portfolio after Ironhack for keep experimenting react and discover new techniques like Tailwind and three.js
 
 ## Error
 
