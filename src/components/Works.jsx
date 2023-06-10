@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 
-import { fadeIn, textVariant } from '../utils/motion'
+import { textVariant } from '../utils/motion'
 import { SectionWrapper } from '../hoc'
 import { projects } from '../constants/index'
 import { styles } from '../styles'
@@ -37,7 +37,7 @@ const ProjectCard = (project) => {
           </p>
           <p className='flex justify-around'>
             {project.tags.map((tag, index) =>
-              <span className={`${tag.color} text-lg font-semibold`} >
+              <span className={`${tag.color} text-lg font-semibold`} key={index + 'tags'}>
                 {tag.name}
               </span>
             )}
@@ -59,7 +59,6 @@ const ProjectCard = (project) => {
 }
 
 
-
 const Works = () => {
 
   const [actualProject, setActualProject] = useState(projects[0])
@@ -69,14 +68,11 @@ const Works = () => {
   const [infoToDisplay, setInfoToDisplay] = useState(null)
 
   useEffect(() => {
-
     setInfoToDisplay(null)
     setRequirement(actualProject.requirement)
     setChallenge(actualProject.challenge)
     setImprovement(actualProject.improvement)
-
   }, [actualProject])
-
 
   return (
     <>

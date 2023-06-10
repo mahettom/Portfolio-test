@@ -1,17 +1,7 @@
-import code from '../assets/code.png'
-import pursuit from '../assets/pursuit.png'
-import sightings from '../assets/sightings.png'
-
 import {
-    javascript,
-    html,
-    css,
-    reactjs,
-    tailwind,
-    nodejs,
-    mongodb,
-    git,
-    threejs,
+    code,
+    pursuit,
+    sightings
 } from "../assets";
 
 
@@ -42,46 +32,6 @@ const objectifs = [
     },
     {
         title: "Then pass on what I have learn",
-    },
-];
-
-
-const technologies = [
-    {
-        name: "HTML 5",
-        icon: html,
-    },
-    {
-        name: "CSS 3",
-        icon: css,
-    },
-    {
-        name: "JavaScript",
-        icon: javascript,
-    },
-    {
-        name: "React JS",
-        icon: reactjs,
-    },
-    {
-        name: "Tailwind CSS",
-        icon: tailwind,
-    },
-    {
-        name: "Node JS",
-        icon: nodejs,
-    },
-    {
-        name: "MongoDB",
-        icon: mongodb,
-    },
-    {
-        name: "Three JS",
-        icon: threejs,
-    },
-    {
-        name: "git",
-        icon: git,
     },
 ];
 
@@ -197,4 +147,4 @@ const projects = [
     },
 ];
 
-export { objectifs, technologies, experiences, projects };
+export { objectifs, experiences, projects };
