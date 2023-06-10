@@ -60,7 +60,7 @@ const experiences = [
         ],
     },
     {
-        title: "Vendeur",
+        title: "Seller",
         company_name: "Wishop",
         date: "2015 - 2017",
         points: [
