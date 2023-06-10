@@ -6,7 +6,7 @@ const App = () => {
   return (
 
     <BrowserRouter>
-      <div className=" snap-y snap-mandatory overflow-x-hidden bg-secondary h-screen w-screen">
+      <div className="snap-y snap-mandatory overflow-x-hidden bg-secondary h-screen w-screen">
 
         <Navbar />
         <section className="snap-start h-[100dvh] w-[100dvw] relative bg-primary">
