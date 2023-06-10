@@ -3,11 +3,11 @@ import { ComputersCanvas } from "./canvas/Computers"
 
 
 const Hero = () => {
+
   return (
+
     <section className={` h-[100dvh] w-[100dvh]`}>
-
       <div className={`${styles.paddingX} absolute inset-0 w-screen flex flex-row md:gap-2`}>
-
 
         <ComputersCanvas />
 
@@ -18,7 +18,6 @@ const Hero = () => {
         </div>
 
       </div>
-
     </section >
   )
 }
