@@ -1,4 +1,4 @@
-import { meshBounds, OrbitControls, Preload, useGLTF } from '@react-three/drei'
+import { OrbitControls, Preload, useGLTF } from '@react-three/drei'
 import { Suspense, useEffect, useState } from 'react'
 import { Canvas } from '@react-three/fiber'
 
@@ -34,20 +34,20 @@ const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
-
+    // ———————————————————————  store the actual width of the page
     const mediaQuery = window.matchMedia("(max-width: 500px)")
     setIsMobile(mediaQuery.matches)
-
+    // ————————————————— litsten for mediaChange and handle update
     const handleMediaQueryChange = (event) => {
       setIsMobile(event.matches);
     }
+    // ——————————————————————— if change occur, trigger handleChange
     mediaQuery.addEventListener('change', handleMediaQueryChange)
 
     return () => {
       mediaQuery.removeEventListener('change', handleMediaQueryChange)
     }
   }, [])
-
 
 
   return (
