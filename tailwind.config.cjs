@@ -8,9 +8,6 @@ module.exports = {
         primary: 'black',
         secondary: 'white',
         tertiary: '#ff5300',
-        'black-200': '#090325',
-        'black-100': '#100d25',
-        'white-100': '#f3f3f3',
       },
       fontWeight: {
         bold: '900'
