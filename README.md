@@ -4,7 +4,7 @@ Tech : `React Tailwind Three.js`
 
 ## Description
 
- I choose to do test and create a portfolio after Ironhack for keep practicing react and discover new techniques like Tailwind and three.js
+ I choose to do test and create a portfolio after Ironhack  mainly for keep practicing react and discover new techniques like Tailwind and three.js
 
 ## Error
 
