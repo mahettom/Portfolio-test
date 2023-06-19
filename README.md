@@ -19,4 +19,4 @@ Tech : `React Tailwind Three.js`
 ## Possible Improvement
 
 - Each section of the application was well divided in component but inside of these sections I could become more consistant creating sub-component.
-- I could go over all the code I did to find repetition or inconsistency and keep improving, but I will focus now on other things.
+- I could go over all the code I did to find repetition or inconsistency and keep improving, but I will focus now on other things (TypeScript).
